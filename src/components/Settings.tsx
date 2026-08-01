@@ -4,15 +4,15 @@ import styles from "./Settings.module.css";
 
 const cards = [
   {
-    num: "01 — CORPORATE",
+    num: "01 - CORPORATE",
     title: "Company Events",
     description:
-      "Close-up, stage, or hosting — bespoke experiences designed to engage the room and elevate the evening.",
+      "Close-up, stage, or hosting: bespoke experiences designed to engage the room and elevate the evening.",
     image: "/images/card-corporate.jpg",
     href: "/corporate",
   },
   {
-    num: "02 — PRIVATE",
+    num: "02 - PRIVATE",
     title: "Private Gatherings",
     description:
       "Intimate, tailored moments for private celebrations and luxury dinners that guests won't forget.",
@@ -20,10 +20,10 @@ const cards = [
     href: "/private-events",
   },
   {
-    num: "03 — WEDDINGS",
+    num: "03 - WEDDINGS",
     title: "Weddings",
     description:
-      "Atmosphere enhanced, never overtaken — entertainment that fits seamlessly into your day.",
+      "Atmosphere enhanced, never overtaken: entertainment that fits seamlessly into your day.",
     image: "/images/card-weddings.jpg",
     href: "/weddings",
   },

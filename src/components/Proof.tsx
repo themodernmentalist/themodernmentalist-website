@@ -16,7 +16,7 @@ export default function Proof() {
       <div className={styles.text}>
         <span className={`eyebrow ${styles.eyebrow}`}>Client Testimonial</span>
         <blockquote>
-          &ldquo;Edwin is incredibly talented — he was the star of our recent
+          &ldquo;Edwin is incredibly talented. He was the star of our recent
           party.&rdquo;
         </blockquote>
         <cite>L&apos;Oréal Paris</cite>

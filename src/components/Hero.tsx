@@ -15,7 +15,7 @@ export default function Hero() {
       <div className={styles.overlay} />
       <div className={styles.content}>
         <p className={`${styles.eyebrow} eyebrow`}>
-          The Modern Mentalist — London &amp; Worldwide
+          The Modern Mentalist · London &amp; Worldwide
         </p>
         <h1>
           <span className={styles.typeReveal}>
@@ -29,7 +29,7 @@ export default function Hero() {
         </h1>
         <div className={styles.sub}>
           <p>
-            Edwin creates experiences shaped by connection, not tricks — for
+            Edwin creates experiences shaped by connection, not tricks, for
             corporate stages, private tables, and everything between.
           </p>
           <a className={styles.cta} href="/enquire">

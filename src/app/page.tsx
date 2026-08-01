@@ -2,6 +2,7 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import Logos from "@/components/Logos";
+import VipQuotes from "@/components/VipQuotes";
 import Proof from "@/components/Proof";
 import Discretion from "@/components/Discretion";
 import Settings from "@/components/Settings";
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <Stats />
       <Logos />
+      <VipQuotes />
       <Proof />
       <Discretion />
       <Settings />

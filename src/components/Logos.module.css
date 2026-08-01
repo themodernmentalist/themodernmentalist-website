@@ -1,16 +1,23 @@
 .logos {
   background: var(--ink);
-  padding: 60px 5%;
+  padding: 56px 5%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 36px;
+  gap: 48px 56px;
 }
 
-.logos span {
-  font-family: var(--font-display);
-  font-size: 19px;
-  color: rgba(247, 246, 243, 0.5);
-  letter-spacing: 0.02em;
+.logo {
+  display: inline-flex;
+  opacity: 0.55;
+  transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+  opacity: 0.9;
+}
+
+.image {
+  display: block;
 }

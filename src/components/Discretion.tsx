@@ -2,11 +2,11 @@ import styles from "./Discretion.module.css";
 
 const redactedQuotes = [
   {
-    quote: "[ PLACEHOLDER — paste redacted quote here ]",
+    quote: "[ PLACEHOLDER: paste redacted quote here ]",
     attribution: "████████████, ████████████",
   },
   {
-    quote: "[ PLACEHOLDER — paste redacted quote here ]",
+    quote: "[ PLACEHOLDER: paste redacted quote here ]",
     attribution: "████████████, ████████████",
   },
 ];
@@ -20,7 +20,7 @@ export default function Discretion() {
         details of.
       </h2>
       <p className={styles.intro}>
-        Some clients — family offices, principals, private events — prefer
+        Some clients (family offices, principals, private events) prefer
         their names stay out of it. Here&apos;s what they said anyway.
       </p>
       <div className={styles.grid}>
