@@ -32,7 +32,7 @@ export default function Faq() {
   return (
     <section className={styles.faq}>
       <span className={`eyebrow ${styles.eyebrow}`}>FAQs</span>
-      <h2>Good questions.</h2>
+      <h2>There are no bad questions.</h2>
       <div className={styles.list}>
         {faqs.map((item, i) => {
           const isOpen = openIndex === i;
