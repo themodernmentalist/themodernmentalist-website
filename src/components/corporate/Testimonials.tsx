@@ -4,17 +4,13 @@ import styles from "./Testimonials.module.css";
 const smaller = [
   {
     quote:
-      "We booked Ed for our Christmas party and he exceeded all expectations. His magic and mentalism were incredibly impressive, and he engaged effortlessly with a mixed group, keeping everyone entertained throughout. The feedback from the team was overwhelmingly positive. He was professional, personable, and a real highlight of the event. Highly recommended.",
+      "Ed exceeded all expectations at our Christmas party. His magic and mentalism were incredibly impressive, and he engaged effortlessly with the whole team. Professional, personable, and a real highlight of the event.",
     name: "Bregal Milestone",
   },
   {
     quote:
-      "Edwin attended our Christmas lunch party with nearly 200 attendees. He was very friendly and amazing from start to finish. He managed to read very intuitively, what is a very reserved crowd, managing to bring in helpers from the audience as needed and really impressed everyone with his 45 min stage act. He then continued to stay on for the duration of the afternoon, walking around the room entertaining individuals and tables. Thank you Edwin, you definitely made our Christmas party!",
+      "With nearly 200 attendees, Edwin read a famously reserved crowd intuitively, bringing in helpers as needed and impressing everyone with his 45-minute stage act. He then stayed on all afternoon, entertaining individuals and tables. He made our Christmas party.",
     name: "Sky",
-  },
-  {
-    quote: "Left everyone spellbound!",
-    name: "EY",
   },
 ];
 
@@ -45,10 +41,22 @@ export default function Testimonials() {
           <cite>CRY UK, Charity Gala</cite>
         </div>
       </div>
+
+      <div className={styles.highlight}>
+        <span className={styles.mark}>&ldquo;</span>
+        <p>
+          Edwin, just want to say a huge thanks for the other day at the EY
+          London Audit Summer Social! Every person who attended has provided
+          amazing feedback, and you left everyone spellbound!
+        </p>
+        <cite>EY, London Audit Summer Social</cite>
+      </div>
+
       <div className={styles.grid}>
         {smaller.map((item) => (
           <div className={styles.card} key={item.name}>
-            <p className={styles.quote}>&ldquo;{item.quote}&rdquo;</p>
+            <span className={styles.cardMark}>&ldquo;</span>
+            <p className={styles.quote}>{item.quote}</p>
             <p className={styles.name}>{item.name}</p>
           </div>
         ))}
