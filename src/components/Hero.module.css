@@ -47,6 +47,10 @@
   animation-delay: 0.2s;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .content h1 {
   font-family: var(--font-display);
   font-weight: 400;

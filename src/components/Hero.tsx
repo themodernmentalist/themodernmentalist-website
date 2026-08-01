@@ -16,7 +16,8 @@ export default function Hero() {
       <div className={styles.overlay} />
       <div className={styles.content}>
         <p className={`${styles.eyebrow} eyebrow`}>
-          The Modern Mentalist · London &amp; Worldwide
+          The Modern Mentalist ·{" "}
+          <span className={styles.nowrap}>London &amp; Worldwide</span>
         </p>
         <h1>
           <span className={styles.typeReveal}>
