@@ -6,7 +6,7 @@ const links = [
   { href: "/private-events", label: "Private" },
   { href: "/weddings", label: "Weddings" },
   { href: "/about", label: "About" },
-  { href: "/enquire", label: "Enquire" },
+  { href: "#enquire", label: "Enquire" },
 ];
 
 export default function Nav() {

@@ -30,7 +30,7 @@ export default function Hero() {
             Your guests won&apos;t just remember Edwin. They&apos;ll
             remember each other.
           </p>
-          <a className={styles.cta} href="/enquire">
+          <a className={styles.cta} href="#enquire">
             Enquire →
           </a>
         </div>

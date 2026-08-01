@@ -7,6 +7,7 @@ import VipQuotes from "@/components/VipQuotes";
 import Proof from "@/components/Proof";
 import Discretion from "@/components/Discretion";
 import Settings from "@/components/Settings";
+import Enquire from "@/components/Enquire";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <Proof />
       <Discretion />
       <Settings />
+      <Enquire />
       <Footer />
     </>
   );
