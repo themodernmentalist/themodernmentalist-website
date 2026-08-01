@@ -48,5 +48,18 @@
 @media (max-width: 820px) {
   .proof {
     grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .photo {
+    min-height: 220px;
+  }
+  .text {
+    padding: 28px 6%;
+  }
+  .eyebrow {
+    margin-bottom: 14px;
+  }
+  .text blockquote {
+    margin-bottom: 14px;
   }
 }

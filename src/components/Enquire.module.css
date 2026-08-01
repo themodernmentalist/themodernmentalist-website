@@ -38,3 +38,18 @@
   display: block;
   border: 0;
 }
+
+@media (max-width: 820px) {
+  .enquire {
+    padding: 32px 5% 48px;
+  }
+  .eyebrow {
+    margin-bottom: 10px;
+  }
+  .enquire h2 {
+    margin-bottom: 8px;
+  }
+  .intro {
+    margin-bottom: 24px;
+  }
+}

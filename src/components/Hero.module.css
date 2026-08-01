@@ -48,9 +48,22 @@
   text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
 }
 
+.breakMobile {
+  display: none;
+}
+
+@media (max-width: 820px) {
+  .breakMobile {
+    display: block;
+  }
+  .breakDesktop {
+    display: none;
+  }
+}
+
 .typeReveal {
   display: block;
-  font-size: clamp(16px, 1.8vw, 20px);
+  font-size: clamp(12px, 3.6vw, 20px);
   font-family: var(--font-mono);
   font-weight: 400;
   color: rgba(247, 246, 243, 0.6);

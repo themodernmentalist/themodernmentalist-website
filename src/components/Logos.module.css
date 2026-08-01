@@ -66,3 +66,13 @@
     animation: none;
   }
 }
+
+@media (max-width: 820px) {
+  .logos {
+    padding: 20px 0;
+  }
+  .track {
+    gap: 40px;
+    padding-right: 40px;
+  }
+}

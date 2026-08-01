@@ -10,7 +10,8 @@ export default function Hero() {
         fill
         priority
         className={styles.heroImage}
-        sizes="100vw"
+        sizes="(max-width: 820px) 200vw, 100vw"
+        quality={90}
       />
       <div className={styles.overlay} />
       <div className={styles.content}>
@@ -21,9 +22,13 @@ export default function Hero() {
           <span className={styles.typeReveal}>
             You&apos;re thinking about your next event...
           </span>
-          Entertainment that
-          <br />
-          creates connection.
+          Entertainment
+          <br className={styles.breakMobile} />
+          {" "}that
+          <br className={styles.breakDesktop} />
+          {" "}creates
+          <br className={styles.breakMobile} />
+          {" "}connection.
         </h1>
         <div className={styles.sub}>
           <p>

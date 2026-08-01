@@ -9,7 +9,7 @@ const stats = [
 export default function Stats() {
   return (
     <section className={styles.stats}>
-      <div className={styles.thesis}>Thousands of unforgettable moments.</div>
+      <div className={styles.thesis}>Thousands of unforgettable moments...</div>
       {stats.map((stat) => (
         <div key={stat.label} className={styles.item}>
           <div className={styles.num}>{stat.num}</div>
