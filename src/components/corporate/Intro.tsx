@@ -4,9 +4,9 @@ export default function Intro() {
   return (
     <section className={styles.intro}>
       <p>
-        Edwin is a London-based mentalist working with companies across
-        finance, tech, luxury retail and motorsport, on conferences, product
-        launches and company parties in London and worldwide.
+        Edwin is a London-based mentalist working with companies on
+        conferences, product launches and company parties in London and
+        worldwide.
       </p>
       <p>
         Every set is built around the room he&apos;s walking into. Guests
