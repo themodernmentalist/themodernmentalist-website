@@ -26,6 +26,7 @@ const cards = [
       "Atmosphere enhanced, never overtaken: entertainment that fits seamlessly into your day.",
     image: "/images/card-weddings.jpg",
     href: "/weddings",
+    objectPosition: "center top",
   },
 ];
 
@@ -44,6 +45,11 @@ export default function Settings() {
                 fill
                 className={styles.image}
                 sizes="(max-width: 820px) 100vw, 33vw"
+                style={
+                  card.objectPosition
+                    ? { objectPosition: card.objectPosition }
+                    : undefined
+                }
               />
             </div>
             <div className={styles.cardBody}>

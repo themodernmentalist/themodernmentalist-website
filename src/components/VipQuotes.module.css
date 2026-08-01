@@ -1,7 +1,7 @@
 .section {
   background: var(--ink);
   color: var(--paper);
-  padding: 56px 5%;
+  padding: 56px 5% 28px;
 }
 
 .eyebrow {
@@ -21,7 +21,7 @@
 
 .item {
   text-align: center;
-  padding-bottom: 40px;
+  padding-bottom: 28px;
   border-bottom: 1px solid rgba(247, 246, 243, 0.15);
 }
 
