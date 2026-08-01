@@ -16,9 +16,9 @@ const quotes = [
   },
   {
     quote:
-      "With nearly 200 attendees, Edwin read a famously reserved crowd intuitively, bringing in helpers as needed and impressing everyone with his 45-minute stage act. He then stayed on all afternoon, entertaining individuals and tables.",
+      "With nearly 200 attendees, Edwin intuitively read a reserved crowd, bringing in helpers and impressing everyone with his stage act, then stayed all afternoon entertaining guests. He made our Christmas party.",
     name: "Sky",
-    role: "Christmas Lunch Party",
+    role: "Christmas Party",
   },
 ];
 
