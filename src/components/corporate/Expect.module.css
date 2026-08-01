@@ -12,26 +12,11 @@
   max-width: 460px;
 }
 
-.eyebrow {
-  color: var(--champagne);
-  display: block;
-  margin-bottom: 20px;
-}
-
-.text h2 {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(28px, 3vw, 40px);
-  line-height: 1.15;
-  margin-bottom: 20px;
-}
-
 .text p {
-  font-size: 15px;
-  line-height: 1.7;
-  color: rgba(247, 246, 243, 0.75);
-  font-weight: 300;
-  margin-bottom: 28px;
+  font-family: var(--font-display);
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.55;
+  margin-bottom: 20px;
 }
 
 .cta {
@@ -43,6 +28,16 @@
   text-decoration: none;
   border-bottom: 1px solid var(--champagne);
   padding-bottom: 6px;
+}
+
+.videoCol {
+  width: 100%;
+}
+
+.eyebrow {
+  color: var(--champagne);
+  display: block;
+  margin-bottom: 16px;
 }
 
 .frame {
@@ -70,13 +65,10 @@
   .text {
     max-width: none;
   }
+  .text p {
+    margin-bottom: 16px;
+  }
   .eyebrow {
     margin-bottom: 12px;
-  }
-  .text h2 {
-    margin-bottom: 14px;
-  }
-  .text p {
-    margin-bottom: 20px;
   }
 }
