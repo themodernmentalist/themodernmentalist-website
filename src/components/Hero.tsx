@@ -21,16 +21,14 @@ export default function Hero() {
           <span className={styles.typeReveal}>
             You&apos;re thinking about your next event.
           </span>
-          Every room has
+          Entertainment that
           <br />
-          a moment it&apos;s
-          <br />
-          waiting for.
+          creates connection.
         </h1>
         <div className={styles.sub}>
           <p>
-            Edwin creates experiences shaped by connection, not tricks, for
-            corporate stages, private tables, and everything between.
+            Your guests won&apos;t just remember him. They&apos;ll remember
+            each other.
           </p>
           <a className={styles.cta} href="/enquire">
             Enquire →

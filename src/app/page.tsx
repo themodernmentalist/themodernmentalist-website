@@ -1,6 +1,7 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
+import Showreel from "@/components/Showreel";
 import Logos from "@/components/Logos";
 import VipQuotes from "@/components/VipQuotes";
 import Proof from "@/components/Proof";
@@ -14,6 +15,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <Stats />
+      <Showreel />
       <Logos />
       <VipQuotes />
       <Proof />
