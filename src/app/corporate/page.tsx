@@ -43,8 +43,8 @@ export default function CorporatePage() {
       <Nav />
       <CorporateHero />
       <Expect />
-      <Formats />
       <Logos />
+      <Formats />
       <Testimonials />
       <Faq />
       <Enquire />
