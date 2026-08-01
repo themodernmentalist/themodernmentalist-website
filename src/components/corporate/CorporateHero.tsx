@@ -19,9 +19,9 @@ export default function CorporateHero() {
           Corporate Events · London &amp; Worldwide
         </p>
         <h1>
-          The moment your conference
+          The moment your guests
           <br />
-          stops checking their phones.
+          stop checking their phones.
         </h1>
         <p className={styles.sub}>
           Close-up mentalism at the drinks reception. A stage set built for
