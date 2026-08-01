@@ -1,0 +1,42 @@
+.stats {
+  background: var(--paper);
+  padding: 110px 5%;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  gap: 40px;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.thesis {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 2.4vw, 34px);
+  line-height: 1.25;
+  font-weight: 400;
+  max-width: 340px;
+}
+
+.item {
+  border-left: 1px solid var(--hairline);
+  padding-left: 24px;
+}
+
+.num {
+  font-family: var(--font-display);
+  font-size: 44px;
+  color: var(--ink);
+}
+
+.label {
+  color: var(--graphite);
+  margin-top: 8px;
+}
+
+@media (max-width: 820px) {
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+  .thesis {
+    grid-column: 1 / -1;
+    max-width: none;
+  }
+}

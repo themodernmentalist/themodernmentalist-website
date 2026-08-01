@@ -1,0 +1,124 @@
+.hero {
+  height: 100vh;
+  min-height: 640px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: var(--ink);
+  color: var(--paper);
+  overflow: hidden;
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center 20%;
+  opacity: 0.55;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 25%, rgba(185, 154, 107, 0.14), transparent 55%),
+    linear-gradient(180deg, rgba(11, 11, 10, 0.55) 0%, rgba(11, 11, 10, 0.35) 45%, #0b0b0a 100%);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 0 5% 90px;
+}
+
+.eyebrow {
+  color: var(--champagne);
+  margin-bottom: 22px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.content h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(40px, 7vw, 88px);
+  line-height: 1.03;
+  letter-spacing: -0.01em;
+  max-width: 920px;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+}
+
+.typeReveal {
+  display: block;
+  font-size: clamp(16px, 1.8vw, 20px);
+  font-family: var(--font-mono);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: rgba(247, 246, 243, 0.6);
+  margin-bottom: 18px;
+  border-right: 2px solid var(--champagne);
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation:
+    typeIn 2.4s steps(34, end) 0.6s forwards,
+    blink 0.8s step-end infinite;
+}
+
+@keyframes typeIn {
+  to {
+    width: 34ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sub {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(247, 246, 243, 0.2);
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 2.8s;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.sub p {
+  max-width: 380px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(247, 246, 243, 0.75);
+  font-weight: 300;
+  font-family: var(--font-body);
+}
+
+.cta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--paper);
+  text-decoration: none;
+  border-bottom: 1px solid var(--champagne);
+  padding-bottom: 6px;
+  white-space: nowrap;
+}
