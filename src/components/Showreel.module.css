@@ -1,6 +1,6 @@
 .showreel {
   background: var(--paper);
-  padding: 110px 5%;
+  padding: 72px 5%;
   border-bottom: 1px solid var(--hairline);
 }
 
@@ -16,7 +16,7 @@
   font-weight: 400;
   font-size: clamp(28px, 3.2vw, 42px);
   text-align: center;
-  margin-bottom: 56px;
+  margin-bottom: 40px;
 }
 
 .frame {

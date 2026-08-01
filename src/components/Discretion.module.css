@@ -1,6 +1,6 @@
 .discretion {
   background: var(--paper);
-  padding: 130px 5%;
+  padding: 88px 5%;
   border-bottom: 1px solid var(--hairline);
 }
 
@@ -23,12 +23,12 @@
   color: var(--graphite);
   max-width: 480px;
   line-height: 1.6;
-  margin-bottom: 64px;
+  margin-bottom: 44px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1px;
   background: var(--hairline);
   border: 1px solid var(--hairline);
@@ -37,6 +37,9 @@
 .card {
   background: var(--bone);
   padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .quote {

@@ -27,8 +27,8 @@ export default function Hero() {
         </h1>
         <div className={styles.sub}>
           <p>
-            Your guests won&apos;t just remember him. They&apos;ll remember
-            each other.
+            Your guests won&apos;t just remember Edwin. They&apos;ll
+            remember each other.
           </p>
           <a className={styles.cta} href="/enquire">
             Enquire →

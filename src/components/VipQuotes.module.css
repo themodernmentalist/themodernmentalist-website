@@ -1,13 +1,13 @@
 .section {
   background: var(--ink);
   color: var(--paper);
-  padding: 130px 5%;
+  padding: 88px 5%;
 }
 
 .eyebrow {
   color: var(--champagne);
   display: block;
-  margin-bottom: 64px;
+  margin-bottom: 48px;
   text-align: center;
 }
 

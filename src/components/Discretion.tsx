@@ -2,12 +2,17 @@ import styles from "./Discretion.module.css";
 
 const redactedQuotes = [
   {
-    quote: "[ PLACEHOLDER: paste redacted quote here ]",
-    attribution: "████████████, ████████████",
+    quote: "The best act we have had at our yearly soirée in years.",
+    attribution: "████████, ██████████████",
   },
   {
-    quote: "[ PLACEHOLDER: paste redacted quote here ]",
-    attribution: "████████████, ████████████",
+    quote: "Absolutely phenomenal. I can't wait to book Edwin again.",
+    attribution: "██████████████, ████████",
+  },
+  {
+    quote:
+      "Edwin surpasses all expectations. We have no idea how he does what he does, and we now use him for all of our events.",
+    attribution: "████████████, ██████████████████",
   },
 ];
 

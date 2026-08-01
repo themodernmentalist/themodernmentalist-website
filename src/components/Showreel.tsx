@@ -3,7 +3,7 @@ import styles from "./Showreel.module.css";
 export default function Showreel() {
   return (
     <section className={styles.showreel}>
-      <span className={`eyebrow ${styles.eyebrow}`}>See Him In Action</span>
+      <span className={`eyebrow ${styles.eyebrow}`}>See Edwin In Action</span>
       <h2>The showreel.</h2>
       <div className={styles.frame}>
         <iframe
