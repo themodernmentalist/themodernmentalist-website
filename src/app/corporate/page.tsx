@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import CorporateHero from "@/components/corporate/CorporateHero";
 import Intro from "@/components/corporate/Intro";
+import Expect from "@/components/corporate/Expect";
 import Formats from "@/components/corporate/Formats";
 import Logos from "@/components/Logos";
 import Testimonials from "@/components/corporate/Testimonials";
@@ -43,6 +44,7 @@ export default function CorporatePage() {
       <Nav />
       <CorporateHero />
       <Intro />
+      <Expect />
       <Formats />
       <Logos />
       <Testimonials />
