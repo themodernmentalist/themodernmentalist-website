@@ -1,10 +1,10 @@
 import Image from "next/image";
+import SpotifyMark from "./icons/SpotifyMark";
 import styles from "./Logos.module.css";
 
 const clients = [
   { name: "L'Oréal", file: "loreal", width: 130 },
   { name: "Meta", file: "meta", width: 100 },
-  { name: "Spotify", file: "spotify", width: 44 },
   { name: "Monzo", file: "monzo", width: 100 },
   { name: "Breitling", file: "breitling", width: 110 },
   { name: "Sky", file: "sky", width: 60 },
@@ -21,6 +21,9 @@ const clients = [
 export default function Logos() {
   return (
     <section className={styles.logos}>
+      <span className={styles.logo} style={{ width: 40 }}>
+        <SpotifyMark width={40} />
+      </span>
       {clients.map((client) => (
         <span key={client.file} className={styles.logo} style={{ width: client.width }}>
           <Image
