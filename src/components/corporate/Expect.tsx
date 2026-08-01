@@ -19,7 +19,9 @@ export default function Expect() {
         </a>
       </div>
       <div className={styles.videoCol}>
-        <span className={`eyebrow ${styles.eyebrow}`}>What To Expect</span>
+        <span className={`eyebrow ${styles.eyebrow}`}>
+          Not sure what to expect? This video is for you.
+        </span>
         <div className={styles.frame}>
           <iframe
             src="https://player.vimeo.com/video/1214857367?title=0&byline=0&portrait=0"
