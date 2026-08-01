@@ -10,8 +10,8 @@ export default function Stats() {
   return (
     <section className={styles.stats}>
       <div className={styles.thesis}>
-        Ten years. Thirty countries. One question every audience asks: how
-        did he know that?
+        Ten years. Thirty countries. Thousands of moments people still talk
+        about.
       </div>
       {stats.map((stat) => (
         <div key={stat.label} className={styles.item}>

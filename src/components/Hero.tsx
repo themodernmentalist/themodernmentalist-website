@@ -19,7 +19,7 @@ export default function Hero() {
         </p>
         <h1>
           <span className={styles.typeReveal}>
-            You&apos;re thinking about your next event.
+            You&apos;re thinking about your next event...
           </span>
           Entertainment that
           <br />
