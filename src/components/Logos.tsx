@@ -3,7 +3,7 @@ import styles from "./Logos.module.css";
 
 const clients = [
   { name: "L'Oréal", file: "loreal", width: 130 },
-  { name: "Meta", file: "meta", width: 100 },
+  { name: "Meta", file: "meta", width: 68 },
   { name: "Spotify", file: "spotify", width: 44 },
   { name: "Monzo", file: "monzo", width: 100 },
   { name: "Breitling", file: "breitling", width: 110 },
