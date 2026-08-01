@@ -1,6 +1,6 @@
 .discretion {
   background: var(--paper);
-  padding: 88px 5%;
+  padding: 56px 5%;
   border-bottom: 1px solid var(--hairline);
 }
 
@@ -23,7 +23,7 @@
   color: var(--graphite);
   max-width: 480px;
   line-height: 1.6;
-  margin-bottom: 44px;
+  margin-bottom: 32px;
 }
 
 .grid {

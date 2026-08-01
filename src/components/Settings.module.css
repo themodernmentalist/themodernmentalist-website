@@ -1,6 +1,6 @@
 .settings {
   background: var(--paper);
-  padding: 88px 5%;
+  padding: 56px 5%;
 }
 
 .eyebrow {
@@ -13,7 +13,7 @@
   font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(28px, 3.2vw, 42px);
-  margin-bottom: 48px;
+  margin-bottom: 32px;
   max-width: 600px;
 }
 
