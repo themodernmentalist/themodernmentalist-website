@@ -1,11 +1,12 @@
 .expect {
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--paper);
+  color: var(--ink);
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 5%;
   padding: 72px 5%;
+  border-bottom: 1px solid var(--hairline);
 }
 
 .text {
@@ -17,6 +18,7 @@
   font-size: clamp(18px, 1.6vw, 22px);
   line-height: 1.55;
   margin-bottom: 20px;
+  color: var(--ink);
 }
 
 .cta {
@@ -24,7 +26,7 @@
   font-size: 11px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--paper);
+  color: var(--ink);
   text-decoration: none;
   border-bottom: 1px solid var(--champagne);
   padding-bottom: 6px;
