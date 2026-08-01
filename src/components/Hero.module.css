@@ -53,7 +53,6 @@
   font-size: clamp(16px, 1.8vw, 20px);
   font-family: var(--font-mono);
   font-weight: 400;
-  letter-spacing: 0.02em;
   color: rgba(247, 246, 243, 0.6);
   margin-bottom: 18px;
   border-right: 2px solid var(--champagne);
@@ -61,13 +60,13 @@
   overflow: hidden;
   width: 0;
   animation:
-    typeIn 2.9s steps(41, end) 0.6s forwards,
+    typeIn 2.9s steps(40, end) 0.6s forwards,
     blink 0.8s step-end infinite;
 }
 
 @keyframes typeIn {
   to {
-    width: 41ch;
+    width: 40ch;
   }
 }
 
