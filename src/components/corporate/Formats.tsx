@@ -12,7 +12,7 @@ const formats = [
     num: "02 - STAGE",
     title: "The Stage Experience",
     description:
-      "A performance built around trust, attention and decision-making, customised to your company and brought to the whole room at once. It's not a generic show, it's about your people and your business. The stage set creates the highlight that carries energy and conversation into the rest of the evening.",
+      "A performance built around trust, attention and decision-making, customised to your company and built for keynote-calibre rooms. It's not a generic show, it's about your people and your business. The stage set creates the highlight that carries energy and conversation into the rest of the evening.",
     requirements: "A performance space with clear sight-lines.",
   },
   {
@@ -28,7 +28,7 @@ export default function Formats() {
   return (
     <section className={styles.formats}>
       <span className={`eyebrow ${styles.eyebrow}`}>Make Your Company Event Stand Out</span>
-      <h2>Three ways to bring him into the room.</h2>
+      <h2>Three ways to bring Edwin into the room.</h2>
       <div className={styles.grid}>
         {formats.map((format) => (
           <div className={styles.card} key={format.num}>

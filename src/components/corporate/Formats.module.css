@@ -80,4 +80,7 @@
   .card {
     padding: 28px;
   }
+  .requirements {
+    display: none;
+  }
 }

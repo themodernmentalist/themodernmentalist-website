@@ -71,6 +71,9 @@
   .hero {
     min-height: 480px;
   }
+  .image {
+    object-position: 85% 55%;
+  }
   .content {
     padding: 0 5% 40px;
   }

@@ -24,9 +24,9 @@ export default function CorporateHero() {
           stop checking their phones.
         </h1>
         <p className={styles.sub}>
-          Close-up mentalism at the drinks reception. A stage set built for
-          keynote-calibre rooms. Or Edwin hosting the whole evening, start to
-          finish.
+          Shaped around the room it&apos;s built for, from conferences to
+          summer socials and product launches, an event your attendees
+          won&apos;t stop talking about.
         </p>
         <a className={styles.cta} href="#enquire">
           Enquire →
