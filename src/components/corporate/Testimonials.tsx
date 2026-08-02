@@ -29,7 +29,7 @@ export default function Testimonials() {
         <div className={styles.photo}>
           <Image
             src="/images/corporate-cry.jpg"
-            alt="Edwin performing close-up mentalism at the CRY UK charity gala"
+            alt="Edwin sharing a moment with a guest at a corporate event"
             fill
             className={styles.image}
             sizes="(max-width: 820px) 100vw, 50vw"
