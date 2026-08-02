@@ -47,7 +47,7 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   background: #000;
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 12px 32px rgba(11, 11, 10, 0.12);
 }
 
 .video {

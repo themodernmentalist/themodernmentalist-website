@@ -12,7 +12,12 @@ const faqs = [
   {
     question: "How long does Edwin perform for?",
     answer:
-      "It's flexible, and tailored to the structure of your event. Typically a set runs 10 to 45 minutes, and is most effective once guests are settled. Close-up works well either as a pre-dinner drinks reception (timing depends on guest numbers) or after the meal.",
+      "It's flexible, and tailored to the structure of your event. The stage set runs 10 to 45 minutes, and is most effective once guests are settled. Close-up usually runs longer than this, with timing dependent on the number of guests.",
+  },
+  {
+    question: "When does Edwin perform?",
+    answer:
+      "Close-up works well either as a pre-dinner drinks reception or after the meal. The stage set is best placed once guests are settled in, as a highlight moment within the evening.",
   },
   {
     question: "What does it cost?",
