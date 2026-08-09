@@ -5,7 +5,7 @@ import Expect from "@/components/corporate/Expect";
 import Formats from "@/components/corporate/Formats";
 import Logos from "@/components/Logos";
 import Testimonials from "@/components/corporate/Testimonials";
-import Faq from "@/components/corporate/Faq";
+import Faq, { faqs } from "@/components/corporate/Faq";
 import Enquire from "@/components/Enquire";
 import Footer from "@/components/Footer";
 
@@ -33,12 +33,29 @@ const jsonLd = {
     "Close-up mentalism, stage performances, and event hosting for corporate events, conferences and company parties in London and worldwide.",
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 export default function CorporatePage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <Nav />
       <CorporateHero />

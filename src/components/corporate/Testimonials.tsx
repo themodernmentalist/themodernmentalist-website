@@ -11,9 +11,9 @@ const quotes = [
   },
   {
     quote:
-      "Edwin, just want to say a huge thanks for the other day at the EY London Audit Summer Social! Every person who attended has provided amazing feedback, and you left everyone spellbound!",
-    name: "EY",
-    role: "London Audit Summer Social",
+      "Incredible! Mind fully blown but also so impressed at the warmth and caring way Edwin looked after guests and hosted our event. He's pure magic.",
+    name: "Sahara Foundation",
+    role: "Charity Event",
   },
   {
     quote:

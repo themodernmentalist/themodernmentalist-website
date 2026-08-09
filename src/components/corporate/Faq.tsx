@@ -1,9 +1,6 @@
-"use client";
-
-import { useState } from "react";
 import styles from "./Faq.module.css";
 
-const faqs = [
+export const faqs = [
   {
     question: "How do I know Edwin is the right choice for my event?",
     answer:
@@ -32,29 +29,20 @@ const faqs = [
 ];
 
 export default function Faq() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   return (
     <section className={styles.faq}>
       <span className={`eyebrow ${styles.eyebrow}`}>FAQs</span>
       <h2>There are no bad questions.</h2>
       <div className={styles.list}>
-        {faqs.map((item, i) => {
-          const isOpen = openIndex === i;
-          return (
-            <div className={styles.item} key={item.question}>
-              <button
-                className={styles.question}
-                onClick={() => setOpenIndex(isOpen ? null : i)}
-                aria-expanded={isOpen}
-              >
-                {item.question}
-                <span className={styles.icon}>{isOpen ? "−" : "+"}</span>
-              </button>
-              {isOpen && <p className={styles.answer}>{item.answer}</p>}
-            </div>
-          );
-        })}
+        {faqs.map((item) => (
+          <details className={styles.item} key={item.question}>
+            <summary className={styles.question}>
+              {item.question}
+              <span className={styles.icon} aria-hidden="true" />
+            </summary>
+            <p className={styles.answer}>{item.answer}</p>
+          </details>
+        ))}
       </div>
     </section>
   );
