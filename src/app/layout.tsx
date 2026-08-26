@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
+import { Fraunces, Karla, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
@@ -12,8 +12,8 @@ const fraunces = Fraunces({
   style: ["normal", "italic"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const karla = Karla({
+  variable: "--font-karla",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
 });
@@ -45,7 +45,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${inter.variable} ${jetbrainsMono.variable}`}
+      className={`${fraunces.variable} ${karla.variable} ${jetbrainsMono.variable}`}
     >
       <body>
         {children}

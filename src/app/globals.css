@@ -3,11 +3,11 @@
   --paper: #f7f6f3;
   --bone: #edeae3;
   --graphite: #6b6862;
-  --champagne: #b99a6b;
+  --champagne: #4e8478;
   --hairline: #d9d5cc;
 
   --font-display: var(--font-fraunces), serif;
-  --font-body: var(--font-inter), sans-serif;
+  --font-body: var(--font-karla), sans-serif;
   --font-mono: var(--font-jetbrains-mono), monospace;
 }
 
