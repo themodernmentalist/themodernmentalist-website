@@ -8,10 +8,10 @@ import styles from "./Footer.module.css";
 const objectPositions: Record<number, string> = {
   1: "15% center",
   2: "85% center",
-  13: "center 15%",
+  17: "center 15%",
 };
 
-const galleryImages = Array.from({ length: 23 }, (_, i) => ({
+const galleryImages = Array.from({ length: 29 }, (_, i) => ({
   src: `/images/gallery/gallery-${i + 1}.jpg`,
   objectPosition: objectPositions[i + 1],
 }));

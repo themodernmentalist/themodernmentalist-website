@@ -18,6 +18,7 @@ const cards = [
       "Intimate, tailored moments for private celebrations and luxury dinners that guests won't forget.",
     image: "/images/card-private.jpg",
     href: "/private-events",
+    objectPosition: "center 20%",
   },
   {
     num: "03 - WEDDINGS",
