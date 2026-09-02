@@ -34,6 +34,14 @@
   .hero {
     min-height: 560px;
   }
+  .heroImage {
+    opacity: 0.75;
+  }
+  .overlay {
+    background:
+      radial-gradient(ellipse at 30% 25%, rgba(185, 154, 107, 0.14), transparent 55%),
+      linear-gradient(180deg, rgba(11, 11, 10, 0.4) 0%, rgba(11, 11, 10, 0.25) 45%, #0b0b0a 100%);
+  }
   .content {
     padding: 0 5% 32px;
   }
