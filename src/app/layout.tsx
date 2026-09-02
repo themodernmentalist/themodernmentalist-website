@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Fraunces, Karla, JetBrains_Mono } from "next/font/google";
+import { Ibarra_Real_Nova, Karla, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
-const fraunces = Fraunces({
+const fraunces = Ibarra_Real_Nova({
   variable: "--font-fraunces",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
 });
 
