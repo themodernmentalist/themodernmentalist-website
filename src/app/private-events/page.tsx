@@ -12,7 +12,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Private Events Mentalist London | Edwin Todd, The Modern Mentalist",
   description:
-    "Book a mentalist for private events, luxury celebrations and UHNW gatherings in London and worldwide. Close-up mentalism from Britain's Got Talent finalist Edwin Todd.",
+    "Book a mentalist for private events, luxury celebrations and UHNW gatherings in London and worldwide. Close-up mentalism from Edwin Todd, who earned four yeses on Britain's Got Talent.",
   alternates: {
     canonical: "/private-events",
   },

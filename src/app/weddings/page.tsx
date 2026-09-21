@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Wedding Magician London | Edwin Todd, The Modern Mentalist",
   description:
-    "Book a wedding magician and mentalist for weddings in London, the UK and destination weddings worldwide. Close-up mentalism woven seamlessly into your day, from Britain's Got Talent finalist Edwin Todd.",
+    "Book a wedding magician and mentalist for weddings in London, the UK and destination weddings worldwide. Close-up mentalism woven seamlessly into your day, from Edwin Todd, who earned four yeses on Britain's Got Talent.",
   alternates: {
     canonical: "/weddings",
   },

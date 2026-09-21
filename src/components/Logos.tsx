@@ -5,7 +5,7 @@ import styles from "./Logos.module.css";
 // tall during processing), used so next/image can compute the correct aspect
 // ratio when we constrain every logo to the same display height in CSS.
 const clients = [
-  { name: "L'Oréal", file: "loreal", width: 2096, height: 400, displayHeight: 17 },
+  { name: "L'Oréal", file: "loreal", width: 2096, height: 400, displayHeight: 24 },
   { name: "Meta", file: "meta", width: 569, height: 400 },
   { name: "Spotify", file: "spotify", width: 399, height: 400 },
   { name: "Monzo", file: "monzo", width: 710, height: 400 },
@@ -48,6 +48,7 @@ function LogoTrack({ suffix }: { suffix: string }) {
 export default function Logos() {
   return (
     <section className={styles.logos}>
+      <span className={`eyebrow ${styles.eyebrow}`}>Trusted By</span>
       <div className={styles.marquee}>
         <LogoTrack suffix="a" />
         <LogoTrack suffix="b" />

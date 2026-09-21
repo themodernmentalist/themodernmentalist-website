@@ -1,7 +1,14 @@
 .logos {
   background: var(--ink);
-  padding: 32px 0;
+  padding: 16px 0 40px;
   overflow: hidden;
+}
+
+.eyebrow {
+  display: block;
+  color: var(--champagne);
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .marquee {
@@ -48,7 +55,7 @@
 .logo {
   display: inline-flex;
   align-items: center;
-  height: 30px;
+  height: 42px;
   opacity: 0.55;
   transition: opacity 0.3s ease;
   flex-shrink: 0;
@@ -72,7 +79,10 @@
 
 @media (max-width: 820px) {
   .logos {
-    padding: 20px 0;
+    padding: 10px 0 20px;
+  }
+  .eyebrow {
+    margin-bottom: 12px;
   }
   .track {
     gap: 40px;

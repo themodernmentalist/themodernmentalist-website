@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://themodernmentalist.com"),
   title: "The Modern Mentalist | Edwin Todd",
   description:
-    "Edwin Todd, mentalist for corporate events, private parties, weddings and destination galas. Britain's Got Talent finalist. Clients include L'Oreal, Meta, Formula One and Spotify.",
+    "Edwin Todd, mentalist for corporate events, private parties, weddings and destination galas. Four yeses on Britain's Got Talent. Clients include L'Oreal, Meta, Formula One and Spotify.",
   alternates: {
     canonical: "/",
   },

@@ -12,7 +12,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Corporate Mentalist London | Edwin Todd, The Modern Mentalist",
   description:
-    "Book a corporate mentalist for events, conferences and company parties in London and worldwide. Close-up magic, stage shows and full-event hosting from Britain's Got Talent finalist Edwin Todd. Trusted by L'Oreal, Meta, Formula One and Spotify.",
+    "Book a corporate mentalist for events, conferences and company parties in London and worldwide. Close-up magic, stage shows and full-event hosting from Edwin Todd, who earned four yeses on Britain's Got Talent. Trusted by L'Oreal, Meta, Formula One and Spotify.",
   alternates: {
     canonical: "/corporate",
   },

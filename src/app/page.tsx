@@ -23,7 +23,7 @@ const jsonLd = [
       "https://uk.linkedin.com/in/edwin-todd-the-modern-mentalist-7a9511154",
     ],
     description:
-      "Edwin Todd is a Britain's Got Talent finalist and mentalist based in London, performing at corporate, private and wedding events worldwide.",
+      "Edwin Todd is a mentalist based in London who earned four yeses on Britain's Got Talent, performing at corporate, private and wedding events worldwide.",
   },
   {
     "@context": "https://schema.org",
