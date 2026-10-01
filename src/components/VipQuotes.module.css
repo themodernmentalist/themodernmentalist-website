@@ -1,20 +1,57 @@
 .section {
   background: var(--ink);
   color: var(--paper);
-  padding: 56px 5% 28px;
+  padding: 56px 5% 0;
 }
 
 .eyebrow {
-  color: var(--champagne);
+  color: var(--gold-label);
   display: block;
   margin-bottom: 32px;
   text-align: center;
 }
 
+.featured {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 48px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(247, 246, 243, 0.15);
+}
+
+.featured.featuredLast {
+  max-width: none;
+  margin-bottom: 0;
+  padding-bottom: 56px;
+}
+
+.featuredQuote {
+  font-size: clamp(32px, 4vw, 48px);
+  margin-bottom: 20px;
+}
+
+.featuredQuoteSmall {
+  font-size: clamp(20px, 2.4vw, 34px);
+}
+
+.nowrapQuote {
+  white-space: nowrap;
+}
+
+.featuredName {
+  font-family: var(--font-body);
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.featuredRole {
+  color: rgba(247, 246, 243, 0.5);
+}
+
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px 5%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px 5%;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -46,12 +83,30 @@
 
 @media (max-width: 820px) {
   .section {
-    padding: 32px 5% 16px;
+    padding: 32px 5% 0;
   }
   .eyebrow {
     margin-bottom: 20px;
   }
+  .featured {
+    margin-bottom: 28px;
+    padding-bottom: 24px;
+  }
+  .featured.featuredLast {
+    padding-bottom: 24px;
+  }
+  .featuredQuote {
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+  .featuredName {
+    font-size: 13px;
+  }
+  .featuredRole {
+    display: none;
+  }
   .grid {
+    grid-template-columns: 1fr;
     gap: 24px 5%;
   }
   .item {
@@ -68,6 +123,9 @@
   }
   .role {
     display: none;
+  }
+  .nowrapQuote {
+    white-space: normal;
   }
 }
 

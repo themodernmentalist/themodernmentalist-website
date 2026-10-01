@@ -83,7 +83,7 @@
 }
 
 .contact a:hover {
-  color: var(--champagne);
+  color: var(--poster-yellow);
 }
 
 .social {
@@ -100,7 +100,7 @@
 }
 
 .social a:hover {
-  color: var(--champagne);
+  color: var(--poster-yellow);
 }
 
 .bottom {

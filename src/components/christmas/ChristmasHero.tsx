@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Underline, HandNote, LoopyArrow } from "../Annotate";
 import styles from "./ChristmasHero.module.css";
 
 export default function ChristmasHero() {
@@ -23,17 +24,30 @@ export default function ChristmasHero() {
         quality={90}
       />
       <div className={styles.overlay} />
+      <div className={styles.guestsNote}>
+        <LoopyArrow className={styles.guestsArrow} />
+        <HandNote color="var(--poster-yellow)">
+          We want your guests looking like this!
+        </HandNote>
+      </div>
       <div className={styles.content}>
-        <p className={`eyebrow ${styles.badge}`}>December Dates Filling Fast</p>
-        <h1>The Christmas party everyone still talks about in January...</h1>
+        <h1>
+          The Christmas party{" "}
+          <Underline>everyone still talks about</Underline> in January...
+        </h1>
         <p className={styles.sub}>
           <strong>The Modern Mentalist:</strong>{" "}
           Entertainment that creates connection &amp; turns colleagues into
           friends.
         </p>
-        <a className={styles.cta} href="#enquire">
-          Check Your Date →
-        </a>
+        <div className={styles.ctaRow}>
+          <a className={styles.cta} href="#enquire">
+            Check Your Date →
+          </a>
+          <HandNote className={styles.ctaNote} color="var(--poster-yellow)">
+            before it&apos;s gone!
+          </HandNote>
+        </div>
       </div>
     </section>
   );

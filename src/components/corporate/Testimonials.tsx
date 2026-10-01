@@ -1,10 +1,13 @@
 import Image from "next/image";
+import { HandNote, CurvedArrow } from "../Annotate";
 import styles from "./Testimonials.module.css";
+
+const featuredQuoteText =
+  "Edwin was the absolute standout at our Gala, both close up and on stage he had the entire room hooked from start to finish";
 
 const quotes = [
   {
-    quote:
-      "Edwin was an absolute standout at our charity gala and exceeded every expectation. He performed close-up mentalism during our drinks reception, where he had guests completely captivated. Later, his stage performance was equally impressive, engaging, interactive, and genuinely mind-blowing. He had the entire room hooked from start to finish. I wouldn't hesitate to recommend Edwin for any corporate event.",
+    quote: featuredQuoteText,
     name: "CRY UK",
     role: "Charity Gala",
     mobileOnly: true,
@@ -41,18 +44,20 @@ export default function Testimonials() {
             className={styles.image}
             sizes="(max-width: 820px) 100vw, 50vw"
           />
+          <div className={styles.reactionNote}>
+            <HandNote className={styles.reactionText} color="var(--poster-yellow)">
+              We want your guests
+              <br />
+              looking like this!
+            </HandNote>
+            <CurvedArrow className={styles.reactionArrow} />
+          </div>
         </div>
         <div className={styles.featuredText}>
           <span className={`eyebrow ${styles.eyebrow}`}>Client Testimonial</span>
-          <blockquote>
-            &ldquo;Edwin was an absolute standout at our charity gala and
-            exceeded every expectation. He performed close-up mentalism
-            during our drinks reception, where he had guests completely
-            captivated. Later, his stage performance was equally impressive,
-            engaging, interactive, and genuinely mind-blowing. He had the
-            entire room hooked from start to finish. I wouldn&apos;t hesitate
-            to recommend Edwin for any corporate event.&rdquo;
-          </blockquote>
+          <p className={styles.featuredQuote}>
+            &ldquo;{featuredQuoteText}&rdquo;
+          </p>
           <cite>CRY UK, Charity Gala</cite>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import { HandNote } from "../Annotate";
 import styles from "./Formats.module.css";
 
 const formats = [
@@ -5,13 +6,14 @@ const formats = [
     num: "01 - CLOSE-UP",
     title: "The Close-Up Experience",
     description:
-      "World-class mentalism up close, whether that's close-up mingling through the room or a dedicated space in Edwin's signature Magic Booth, a place where guests can step into the experience for a moment, ten minutes, or the entire evening, all on their own terms. As reactions build and word spreads, a quiet buzz develops across the room.",
+      "World-class mentalism up close, mingling through the room or in Edwin's signature Magic Booth, guests can step in for a moment or the whole evening, entirely on their own terms. Reactions build, word spreads, and a quiet buzz takes over the room.",
+    note: "this is even better when they think I'm just another guest",
   },
   {
     num: "02 - PRIVATE SHOW",
     title: "The Private Show Experience",
     description:
-      "Turn your event into a private theatre. Picture a moment where the entire room comes together: guests drawn in, attention held, reactions shared. As Edwin reveals thoughts, predicts decisions and shapes moments of magic around the people in the room. The same experience that has entertained celebrities and UHNW audiences from resorts in the Maldives to intimate dinners in Miami.",
+      "Turn your event into a private theatre. The entire room comes together: guests drawn in, attention held, reactions shared, as Edwin reveals thoughts and shapes moments of magic around the people in the room. The same experience that's entertained celebrities and UHNW audiences from the Maldives to Miami.",
   },
   {
     num: "03 - HOSTING",
@@ -32,6 +34,11 @@ export default function Formats() {
             <span className={styles.num}>{format.num}</span>
             <h3>{format.title}</h3>
             <p>{format.description}</p>
+            {format.note && (
+              <HandNote className={styles.note} color="var(--poster-yellow)">
+                {format.note}
+              </HandNote>
+            )}
           </div>
         ))}
       </div>

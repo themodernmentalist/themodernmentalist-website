@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import StampIn from "./StampIn";
 import styles from "./Settings.module.css";
 
 const cards = [
@@ -37,28 +38,30 @@ export default function Settings() {
       <span className={`eyebrow ${styles.eyebrow}`}>Choose your setting</span>
       <h2>Every experience is shaped by the room it&apos;s built for.</h2>
       <div className={styles.grid}>
-        {cards.map((card) => (
-          <Link href={card.href} key={card.num} className={styles.card}>
-            <div className={styles.cardImage}>
-              <Image
-                src={card.image}
-                alt={card.title}
-                fill
-                className={styles.image}
-                sizes="(max-width: 820px) 100vw, 33vw"
-                style={
-                  card.objectPosition
-                    ? { objectPosition: card.objectPosition }
-                    : undefined
-                }
-              />
-            </div>
-            <div className={styles.cardBody}>
-              <span className={`${styles.num}`}>{card.num}</span>
-              <h3>{card.title}</h3>
-              <p>{card.description}</p>
-            </div>
-          </Link>
+        {cards.map((card, i) => (
+          <StampIn key={card.num} delay={i * 120}>
+            <Link href={card.href} className={styles.card}>
+              <div className={styles.cardImage}>
+                <Image
+                  src={card.image}
+                  alt={card.title}
+                  fill
+                  className={styles.image}
+                  sizes="(max-width: 820px) 100vw, 33vw"
+                  style={
+                    card.objectPosition
+                      ? { objectPosition: card.objectPosition }
+                      : undefined
+                  }
+                />
+              </div>
+              <div className={styles.cardBody}>
+                <span className={`${styles.num}`}>{card.num}</span>
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+              </div>
+            </Link>
+          </StampIn>
         ))}
       </div>
     </section>

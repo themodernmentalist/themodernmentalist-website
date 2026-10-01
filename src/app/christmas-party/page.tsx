@@ -4,12 +4,14 @@ import ChristmasHero from "@/components/christmas/ChristmasHero";
 import Stats from "@/components/Stats";
 import Showreel from "@/components/Showreel";
 import Logos from "@/components/Logos";
+import VipQuotes from "@/components/VipQuotes";
 import Formats from "@/components/christmas/Formats";
 import Testimonials from "@/components/christmas/Testimonials";
 import AboutLink from "@/components/christmas/AboutLink";
 import Faq, { faqs } from "@/components/christmas/Faq";
 import Enquire from "@/components/Enquire";
 import Footer from "@/components/Footer";
+import pageStyles from "./page.module.css";
 
 const PAGE_TITLE = "Christmas Party Magician & Mentalist London | Edwin Todd";
 const PAGE_DESCRIPTION =
@@ -102,9 +104,20 @@ export default function ChristmasPartyPage() {
       />
       <Nav />
       <ChristmasHero />
-      <Showreel />
-      <Stats />
+      <div className={pageStyles.statsWrap}>
+        <Stats hideThesisOnMobile mobileStacked />
+      </div>
+      <div
+        style={{
+          marginTop: "-48px",
+          position: "relative",
+          borderTop: "1px solid var(--hairline)",
+        }}
+      >
+        <Showreel />
+      </div>
       <Logos />
+      <VipQuotes featuredOnly />
       <Formats />
       <Testimonials />
       <AboutLink />

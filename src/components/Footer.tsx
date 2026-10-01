@@ -9,6 +9,8 @@ const objectPositions: Record<number, string> = {
   1: "15% center",
   2: "85% center",
   19: "center 15%",
+  26: "center 20%",
+  32: "center 12%",
 };
 
 const galleryImages = Array.from({ length: 33 }, (_, i) => ({

@@ -4,8 +4,9 @@ import styles from "./Testimonials.module.css";
 const quotes = [
   {
     quote:
-      "Ed exceeded all expectations at our Christmas party. Professional, personable, and a real highlight of the event.",
-    name: "Bregal Milestone",
+      "Edwin was amazing! We had him perform at a client event and we were all so blown away. Completely different to any magician I've seen before with a unique and engaging performance. Could not recommend him enough!!!!",
+    name: "Oxford Global",
+    mobileHidden: true,
   },
   {
     quote:
@@ -15,9 +16,8 @@ const quotes = [
   },
   {
     quote:
-      "Edwin was amazing! We had him perform at a client event and we were all so blown away. Completely different to any magician I've seen before with a unique and engaging performance. Could not recommend him enough!!!!",
-    name: "Oxford Global",
-    mobileHidden: true,
+      "We hired Ed for our corporate party and to say people are still talking about it days after the event itself is an understatement. Ed amazed everyone with his mentalism and magic, everyone came away with a story to tell of how they were utterly baffled at what happened. We are already looking to rebook him for next years event!",
+    name: "Strangford Management",
   },
   {
     quote:

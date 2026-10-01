@@ -7,14 +7,16 @@
 }
 
 .eyebrow {
-  color: var(--champagne);
+  color: var(--gold-label);
   display: block;
   margin-bottom: 16px;
 }
 
 .expect h2 {
-  font-family: var(--font-display);
-  font-weight: 400;
+  font-family: var(--font-poster-thin);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
   font-size: clamp(28px, 3.2vw, 42px);
   margin-bottom: 28px;
 }
@@ -45,7 +47,7 @@
   text-transform: uppercase;
   color: var(--ink);
   text-decoration: none;
-  border-bottom: 1px solid var(--champagne);
+  border-bottom: 1px solid var(--poster-gold-ink);
   padding-bottom: 6px;
   margin-top: 32px;
 }

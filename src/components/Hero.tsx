@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Underline, HandNote, MarkerWrite, CurvedArrow } from "./Annotate";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
@@ -15,30 +16,33 @@ export default function Hero() {
       />
       <div className={styles.overlay} />
       <div className={styles.content}>
-        <p className={`${styles.eyebrow} eyebrow`}>
-          The Modern Mentalist ·{" "}
-          <span className={styles.nowrap}>London &amp; Worldwide</span>
-        </p>
-        <h1>
-          <span className={styles.typeReveal}>
-            You&apos;re thinking about your next event...
-          </span>
-          Entertainment
-          <br className={styles.breakMobile} />
-          {" "}that
-          <br className={styles.breakDesktop} />
-          {" "}creates
-          <br className={styles.breakMobile} />
-          {" "}connection.
-        </h1>
+        <div className={styles.mindReaderWrap}>
+          <HandNote color="var(--poster-yellow)">mind reader</HandNote>
+          <CurvedArrow className={styles.mindReaderArrow} />
+        </div>
+        <h1 className={styles.wordmark}>Edwin</h1>
+        <div className={styles.subtitleRow}>
+          <p className={styles.subtitle}>
+            <Underline>The Modern Mentalist</Underline>
+          </p>
+          <p className={styles.tagline}>
+            <MarkerWrite
+              text={"Entertainment that\ncreates connection."}
+              color="var(--poster-yellow)"
+            />
+          </p>
+        </div>
         <div className={styles.sub}>
           <p>
             Your guests won&apos;t just remember Edwin. They&apos;ll
             remember each other.
           </p>
-          <a className={styles.cta} href="#enquire">
-            Enquire →
-          </a>
+          <div className={styles.ctaRow}>
+            <a className={styles.cta} href="#enquire">
+              Enquire →
+            </a>
+            <HandNote color="var(--poster-yellow)">trust me ;)</HandNote>
+          </div>
         </div>
       </div>
     </section>

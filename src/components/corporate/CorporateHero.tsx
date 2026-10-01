@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { HandNote, LoopyArrow, ScratchUnderline } from "../Annotate";
 import styles from "./CorporateHero.module.css";
 
 export default function CorporateHero() {
@@ -14,6 +15,21 @@ export default function CorporateHero() {
         quality={90}
       />
       <div className={styles.overlay} />
+      <div className={styles.aboutThemNote}>
+        <LoopyArrow className={styles.aboutThemArrow} />
+        <HandNote color="var(--poster-yellow)">it&apos;s about them</HandNote>
+      </div>
+      <div className={styles.eventNotes}>
+        <HandNote color="var(--poster-yellow)">
+          product launches
+          <br />
+          summer socials
+          <br />
+          conference energisers
+          <br />
+          you get the idea :)
+        </HandNote>
+      </div>
       <div className={styles.content}>
         <p className={`eyebrow ${styles.eyebrow}`}>
           Corporate Events · London &amp; Worldwide
@@ -21,16 +37,17 @@ export default function CorporateHero() {
         <h1>
           The moment your guests
           <br />
-          stop checking their phones.
+          <ScratchUnderline color="var(--poster-yellow)" className={styles.stopUnderline}>stop</ScratchUnderline> checking their phones.
         </h1>
         <p className={styles.sub}>
-          Close-up, stage, or hosting, shaped around the room it&apos;s
-          built for, from conferences to summer socials and product
-          launches, an event your attendees won&apos;t stop talking about.
+          Close up, stage or hosting- an event your attendees won&apos;t
+          stop talking about.
         </p>
-        <a className={styles.cta} href="#enquire">
-          Enquire →
-        </a>
+        <div className={styles.ctaRow}>
+          <a className={styles.cta} href="#enquire">
+            Enquire →
+          </a>
+        </div>
       </div>
     </section>
   );

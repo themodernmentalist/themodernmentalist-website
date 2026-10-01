@@ -47,8 +47,8 @@ export default function Home() {
       <Logos />
       <VipQuotes />
       <Proof />
-      <Discretion />
       <Settings />
+      <Discretion />
       <Enquire />
       <Footer />
     </>

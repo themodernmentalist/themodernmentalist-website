@@ -1,15 +1,19 @@
+import StampIn from "../StampIn";
+import { HandNote } from "../Annotate";
 import styles from "./Formats.module.css";
 
 const formats = [
   {
     num: "01 - DRINKS RECEPTION",
-    title: "Close-Up, Table to Table",
+    title: "Close-Up Experience",
     description: "The perfect icebreaker for a room that hasn't warmed up yet.",
+    noteAfterTitle: "up close & personal",
   },
   {
     num: "02 - THE HIGHLIGHT",
     title: "The Stage Set",
     description: "The unforgettable moment they'll still be talking about next Christmas.",
+    noteAfterTitle: "this can be bespoke to your company",
   },
   {
     num: "03 - HOSTING",
@@ -24,12 +28,17 @@ export default function Formats() {
       <span className={`eyebrow ${styles.eyebrow}`}>How It Works</span>
       <h2>Edwin builds his performance around your evening...</h2>
       <div className={styles.grid}>
-        {formats.map((format) => (
-          <div className={styles.card} key={format.num}>
+        {formats.map((format, i) => (
+          <StampIn key={format.num} delay={i * 120} className={styles.card}>
             <span className={styles.num}>{format.num}</span>
             <h3>{format.title}</h3>
+            {format.noteAfterTitle && (
+              <HandNote className={styles.noteAfterTitle} color="var(--poster-yellow)">
+                {format.noteAfterTitle}
+              </HandNote>
+            )}
             <p>{format.description}</p>
-          </div>
+          </StampIn>
         ))}
       </div>
       <a className={styles.cta} href="#enquire">

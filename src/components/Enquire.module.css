@@ -5,30 +5,44 @@
   text-align: center;
 }
 
-.eyebrow {
-  color: var(--champagne);
-  display: block;
+.title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: clamp(36px, 5vw, 64px);
   margin-bottom: 16px;
 }
 
-.enquire h2 {
+.subtitle {
   font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(28px, 3.2vw, 42px);
-  margin-bottom: 12px;
+  font-style: italic;
+  font-size: clamp(18px, 2vw, 24px);
+  color: rgba(247, 246, 243, 0.9);
+  margin-bottom: 16px;
 }
 
 .intro {
   font-size: 15px;
   color: rgba(247, 246, 243, 0.65);
-  max-width: 420px;
+  max-width: 560px;
+  white-space: nowrap;
   line-height: 1.6;
   margin: 0 auto 40px;
 }
 
-.frame {
+.introNote {
+  font-size: 19px;
+  white-space: nowrap;
+}
+
+.frameWrap {
+  position: relative;
   max-width: 720px;
   margin: 0 auto;
+}
+
+.frame {
   background: var(--paper);
   padding: 8px;
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.3);
@@ -43,13 +57,14 @@
   .enquire {
     padding: 32px 5% 48px;
   }
-  .eyebrow {
+  .title {
     margin-bottom: 10px;
   }
-  .enquire h2 {
-    margin-bottom: 8px;
+  .subtitle {
+    margin-bottom: 12px;
   }
   .intro {
+    white-space: normal;
     margin-bottom: 24px;
   }
 }

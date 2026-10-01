@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ScratchUnderline, HandNote, CurvedArrow, LoopyArrow } from "../Annotate";
 import styles from "./WeddingsHero.module.css";
 
 export default function WeddingsHero() {
@@ -23,6 +24,14 @@ export default function WeddingsHero() {
         quality={90}
       />
       <div className={styles.overlay} />
+      <div className={styles.brideNote}>
+        <HandNote color="var(--poster-yellow)">bride</HandNote>
+        <CurvedArrow className={styles.brideArrow} />
+      </div>
+      <div className={styles.groomNote}>
+        <HandNote color="var(--poster-yellow)">groom</HandNote>
+        <LoopyArrow className={styles.groomArrow} />
+      </div>
       <div className={styles.content}>
         <p className={`eyebrow ${styles.eyebrow}`}>
           Weddings · London, UK &amp; Destination
@@ -32,13 +41,18 @@ export default function WeddingsHero() {
           <br />
           your guests
           <br />
-          will never forget.
+          will <ScratchUnderline color="var(--poster-yellow)" className={styles.neverUnderline}>never</ScratchUnderline> forget.
         </h1>
-        <p className={styles.sub}>
+        <p className={`${styles.sub} ${styles.subDesktop}`}>
           From close-up magic to hosting your day, Edwin brings his craft
           to high-end weddings across London, the UK, and a select number
           of destination weddings each year, woven in for moments of
           laughter, connection and quiet amazement.
+        </p>
+        <p className={`${styles.sub} ${styles.subMobile}`}>
+          From close-up magic to hosting your day, Edwin brings
+          unforgettable moments to weddings across London, the UK, and
+          worldwide.
         </p>
         <a className={styles.cta} href="#enquire">
           Enquire →

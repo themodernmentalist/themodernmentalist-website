@@ -21,14 +21,21 @@
 }
 
 .num {
-  font-family: var(--font-display);
-  font-size: 44px;
-  color: var(--ink);
+  font-family: var(--font-poster);
+  font-weight: 400;
+  font-size: 52px;
+  letter-spacing: 0.01em;
+  color: var(--poster-gold-ink);
+  line-height: 1.1;
 }
 
 .label {
   color: var(--graphite);
   margin-top: 8px;
+}
+
+.labelMobile {
+  display: none;
 }
 
 @media (max-width: 820px) {
@@ -41,11 +48,45 @@
     grid-column: 1 / -1;
     max-width: none;
   }
+  .thesisMobileHidden {
+    display: none;
+  }
   .item {
     padding-left: 12px;
   }
   .num {
-    font-size: 30px;
+    font-size: 32px;
+  }
+  .mobileStacked {
+    padding-top: 16px;
+  }
+  .mobileStacked .item {
+    position: relative;
+    border-left: 0;
+  }
+  .mobileStacked .item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -16px;
+    bottom: 0;
+    width: 1px;
+    background: var(--hairline);
+  }
+  .mobileStacked .thesis + .item {
+    padding-left: 0;
+  }
+  .mobileStacked .thesis + .item::before {
+    display: none;
+  }
+  .mobileStacked .num {
+    font-size: 44px;
+  }
+  .label:has(.labelMobile) .labelDesktop {
+    display: none;
+  }
+  .labelMobile {
+    display: inline;
   }
 }
 
@@ -55,5 +96,8 @@
   }
   .item {
     padding-left: 8px;
+  }
+  .mobileStacked .num {
+    font-size: 36px;
   }
 }

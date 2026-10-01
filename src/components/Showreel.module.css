@@ -5,15 +5,17 @@
 }
 
 .eyebrow {
-  color: var(--champagne);
+  color: var(--gold-label);
   display: block;
   margin-bottom: 16px;
   text-align: center;
 }
 
 .showreel h2 {
-  font-family: var(--font-display);
-  font-weight: 400;
+  font-family: var(--font-poster-thin);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
   font-size: clamp(28px, 3.2vw, 42px);
   text-align: center;
   margin-bottom: 28px;

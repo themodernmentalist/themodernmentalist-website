@@ -1,0 +1,161 @@
+.underlineWrap {
+  position: relative;
+  display: inline-block;
+}
+
+.underlineSvg {
+  position: absolute;
+  left: -2%;
+  bottom: -0.22em;
+  width: 104%;
+  height: 0.3em;
+  min-height: 8px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.circleWrap {
+  position: relative;
+  display: inline-block;
+}
+
+.circleSvg {
+  position: absolute;
+  left: -14%;
+  top: -18%;
+  width: 128%;
+  height: 136%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.pathOut {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
+
+.pathIn {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.7s cubic-bezier(0.3, 0.7, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pathOut {
+    stroke-dashoffset: 0;
+  }
+  .pathIn {
+    transition: none;
+  }
+}
+
+.curvedArrow {
+  width: 48px;
+  height: 42px;
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+.loopyArrow {
+  width: 62px;
+  height: 96px;
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+.pathInHead {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.35s ease;
+  transition-delay: 0.55s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pathInHead {
+    transition: none;
+  }
+}
+
+.markerWriteWrap {
+  display: inline-block;
+}
+
+.markerWrite {
+  display: inline-block;
+  font-family: var(--font-hand);
+  font-weight: 700;
+  line-height: 1.15;
+  white-space: pre-line;
+  clip-path: inset(-0.5em 100% -0.4em -0.1em);
+  transition-property: clip-path;
+  transition-timing-function: cubic-bezier(0.4, 0.1, 0.2, 1);
+  user-select: none;
+}
+
+.markerWriteIn {
+  clip-path: inset(-0.5em 0% -0.4em -0.1em);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .markerWrite {
+    clip-path: none;
+    transition: none;
+  }
+}
+
+.stampAnchor {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+.stamp {
+  --stamp-red: #b3261e;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  font-family: var(--font-poster);
+  font-weight: 400;
+  font-size: clamp(22px, 3vw, 34px);
+  letter-spacing: 0.16em;
+  color: var(--stamp-red);
+  border: 3px solid var(--stamp-red);
+  outline: 1px solid var(--stamp-red);
+  outline-offset: 4px;
+  padding: 10px 20px;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(3.4)
+    rotate(calc(var(--stamp-rotate, -10deg) - 24deg));
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.2, 1.6, 0.4, 1), opacity 0.15s ease 0.05s;
+}
+
+.stampIn {
+  transform: translate(-50%, -50%) scale(1) rotate(var(--stamp-rotate, -10deg));
+  opacity: 0.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stamp {
+    transition: none;
+  }
+}
+
+.handNote {
+  display: inline-block;
+  font-family: var(--font-hand);
+  font-weight: 600;
+  font-size: 1.55em;
+  color: var(--poster-gold-ink);
+  transform: rotate(-3deg) scale(0.8);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.handNoteIn {
+  opacity: 1;
+  transform: rotate(-3deg) scale(1);
+}

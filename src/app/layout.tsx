@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { Ibarra_Real_Nova, Karla, JetBrains_Mono } from "next/font/google";
+import { Bodoni_Moda, Karla, JetBrains_Mono, Anton, Caveat, Oswald } from "next/font/google";
 import Script from "next/script";
+import CallButton from "@/components/CallButton";
 import "./globals.css";
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
-const fraunces = Ibarra_Real_Nova({
+const fraunces = Bodoni_Moda({
   variable: "--font-fraunces",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
   style: ["normal", "italic"],
 });
 
@@ -22,6 +23,24 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   subsets: ["latin"],
   weight: ["400", "500"],
+});
+
+const anton = Anton({
+  variable: "--font-anton",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const caveat = Caveat({
+  variable: "--font-caveat",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+});
+
+const oswald = Oswald({
+  variable: "--font-oswald",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -45,10 +64,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${karla.variable} ${jetbrainsMono.variable}`}
+      className={`${fraunces.variable} ${karla.variable} ${jetbrainsMono.variable} ${anton.variable} ${caveat.variable} ${oswald.variable}`}
     >
       <body>
         {children}
+        <CallButton />
         {GA_MEASUREMENT_ID && (
           <>
             <Script

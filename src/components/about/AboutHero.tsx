@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { HandNote, CurvedArrow } from "../Annotate";
 import styles from "./AboutHero.module.css";
 
 export default function AboutHero() {
@@ -15,6 +16,10 @@ export default function AboutHero() {
           quality={90}
         />
         <div className={styles.overlay} />
+        <div className={styles.reallyMeNote}>
+          <HandNote color="var(--poster-yellow)">that&apos;s me</HandNote>
+          <CurvedArrow className={styles.reallyMeArrow} />
+        </div>
         <div className={styles.heroText}>
           <p className={`eyebrow ${styles.eyebrow}`}>About Edwin</p>
           <h1>

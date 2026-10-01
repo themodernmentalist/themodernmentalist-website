@@ -4,14 +4,15 @@
 }
 
 .eyebrow {
-  color: var(--champagne);
+  color: var(--gold-label);
   display: block;
   margin-bottom: 16px;
 }
 
 .formats h2 {
-  font-family: var(--font-display);
-  font-weight: 400;
+  font-family: var(--font-poster-thin);
+  font-weight: 500;
+  letter-spacing: -0.01em;
   font-size: clamp(28px, 3.2vw, 42px);
   margin-bottom: 48px;
   max-width: 600px;
@@ -26,14 +27,32 @@
 }
 
 .card {
+  position: relative;
   background: var(--paper);
   padding: 40px 32px;
+}
+
+.noteAfterTitle {
+  display: block;
+  font-size: 19px;
+  margin-top: -8px;
+  margin-bottom: 14px;
+}
+
+.card .noteSide {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform-origin: left center;
+  transform: rotate(-84deg) translateX(-50%);
+  font-size: 19px;
+  white-space: nowrap;
 }
 
 .num {
   font-family: var(--font-mono);
   font-size: 11px;
-  color: var(--champagne);
+  color: var(--poster-gold-ink);
   letter-spacing: 0.1em;
   margin-bottom: 16px;
   display: block;
@@ -63,6 +82,12 @@
   }
   .formats h2 {
     margin-bottom: 24px;
+  }
+  .card .noteSide {
+    position: static;
+    display: block;
+    transform: none;
+    margin-top: 14px;
   }
   .grid {
     grid-template-columns: 1fr;
