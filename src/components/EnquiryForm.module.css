@@ -1,74 +1,53 @@
 .sheet {
-  --ink-brown: #2b1d0e;
-  --sepia: #7a5a1c;
+  --ink-brown: #1e1a14;
+  --sepia: rgba(30, 26, 20, 0.75);
   --wax: #8f2220;
   --typed: var(--font-typewriter), "Courier New", monospace;
   --forest: #12201a;
-  --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.32 0 0 0 0 0.24 0 0 0 0 0.12 0 0 0 0.34 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
   max-width: 780px;
   margin: 28px auto 0;
-  filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.45)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35));
 }
 
+/* Same cream cotton-stationery paper as the proposal pages: a fine fibre texture,
+   a soft inner glow, a deep shadow and a thin gold hairline inset from the edge. */
 .form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 34px 40px;
   text-align: left;
   position: relative;
-  padding: 64px 64px 52px;
+  padding: 72px 72px 60px;
   color: var(--ink-brown);
-  clip-path: polygon(0.00% 0.10%, 2.27% 0.05%, 4.55% 0.21%, 6.82% 0.02%, 9.09% 0.17%, 11.36% 0.12%, 13.64% 0.02%, 15.91% 0.16%, 18.18% 0.01%, 20.45% 0.14%, 22.73% 0.02%, 25.00% 0.03%, 27.27% 0.14%, 29.55% 0.26%, 31.82% 0.04%, 34.09% 0.07%, 36.36% 0.20%, 38.64% 0.30%, 40.91% 0.18%, 43.18% 0.13%, 45.45% 0.31%, 47.73% 0.01%, 50.00% 0.27%, 52.27% 0.09%, 54.55% 0.05%, 56.82% 0.04%, 59.09% 0.10%, 61.36% 0.26%, 63.64% 0.06%, 65.91% 0.19%, 68.18% 0.20%, 70.45% 0.12%, 72.73% 0.18%, 75.00% 0.02%, 77.27% 0.02%, 79.55% 0.07%, 81.82% 0.22%, 84.09% 0.14%, 86.36% 0.10%, 88.64% 0.19%, 90.91% 0.15%, 93.18% 0.10%, 95.45% 0.25%, 97.73% 0.22%, 100.00% 0.08%, 99.74% 3.85%, 99.76% 7.69%, 99.61% 11.54%, 99.67% 15.38%, 99.87% 19.23%, 99.56% 23.08%, 99.95% 26.92%, 99.81% 30.77%, 99.66% 34.62%, 99.93% 38.46%, 99.78% 42.31%, 99.98% 46.15%, 99.70% 50.00%, 99.66% 53.85%, 99.74% 57.69%, 99.61% 61.54%, 99.86% 65.38%, 99.69% 69.23%, 99.73% 73.08%, 99.74% 76.92%, 99.79% 80.77%, 99.62% 84.62%, 99.57% 88.46%, 99.79% 92.31%, 99.70% 96.15%, 99.97% 100.00%, 97.73% 99.78%, 95.45% 99.79%, 93.18% 99.68%, 90.91% 99.74%, 88.64% 99.91%, 86.36% 99.88%, 84.09% 99.79%, 81.82% 99.99%, 79.55% 99.85%, 77.27% 99.95%, 75.00% 99.96%, 72.73% 99.98%, 70.45% 99.75%, 68.18% 99.96%, 65.91% 99.92%, 63.64% 99.87%, 61.36% 99.72%, 59.09% 99.97%, 56.82% 99.86%, 54.55% 99.82%, 52.27% 99.72%, 50.00% 99.74%, 47.73% 99.72%, 45.45% 99.91%, 43.18% 99.87%, 40.91% 99.89%, 38.64% 99.72%, 36.36% 99.69%, 34.09% 99.95%, 31.82% 99.94%, 29.55% 99.93%, 27.27% 99.93%, 25.00% 99.84%, 22.73% 99.81%, 20.45% 99.92%, 18.18% 100.00%, 15.91% 99.87%, 13.64% 99.88%, 11.36% 99.82%, 9.09% 99.70%, 6.82% 99.78%, 4.55% 99.84%, 2.27% 99.80%, 0.00% 99.78%, 0.02% 96.15%, 0.40% 92.31%, 0.35% 88.46%, 0.39% 84.62%, 0.36% 80.77%, 0.18% 76.92%, 0.18% 73.08%, 0.05% 69.23%, 0.29% 65.38%, 0.03% 61.54%, 0.03% 57.69%, 0.09% 53.85%, 0.07% 50.00%, 0.15% 46.15%, 0.02% 42.31%, 0.00% 38.46%, 0.07% 34.62%, 0.05% 30.77%, 0.16% 26.92%, 0.01% 23.08%, 0.39% 19.23%, 0.28% 15.38%, 0.07% 11.54%, 0.11% 7.69%, 0.16% 3.85%);
-  background-color: #efe2bf;
-  background-image: var(--grain),
-    radial-gradient(ellipse at 18% 12%, rgba(255, 250, 230, 0.7), transparent 55%),
-    radial-gradient(ellipse at 85% 78%, rgba(160, 110, 40, 0.16), transparent 50%),
-    radial-gradient(ellipse at 60% 40%, rgba(190, 150, 80, 0.12), transparent 60%),
-    linear-gradient(180deg, #f3e8c9, #e8d7ab);
-  box-shadow: inset 0 0 70px rgba(140, 95, 30, 0.38), inset 0 0 14px rgba(100, 60, 10, 0.45);
+  background-color: #f5eede;
+  background-image: url("/images/paper.jpg");
+  background-size: 1000px auto;
+  box-shadow: inset 0 0 140px rgba(120, 90, 40, 0.1), inset 0 0 2px rgba(120, 90, 40, 0.25),
+    0 40px 90px rgba(0, 0, 0, 0.5);
 }
 
-/* faint tri-fold creases, as if the letter arrived folded */
-.form::before,
-.form::after {
+.form::before {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
-  height: 14px;
+  inset: 14px;
+  border: 1px solid rgba(154, 128, 72, 0.45);
   pointer-events: none;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(90, 60, 15, 0.06) 45%,
-    rgba(255, 250, 235, 0.18) 52%,
-    transparent
-  );
-}
-.form::before {
-  top: 33.3%;
-}
-.form::after {
-  top: 66.6%;
 }
 
 .stamp {
   position: absolute;
-  top: 26px;
-  right: 30px;
+  top: 34px;
+  right: 34px;
   margin: 0;
-  padding: 6px 12px;
-  border: 2px solid rgba(143, 34, 32, 0.7);
-  outline: 1px solid rgba(143, 34, 32, 0.45);
+  padding: 5px 10px;
+  border: 1px solid rgba(143, 34, 32, 0.65);
+  outline: 1px solid rgba(143, 34, 32, 0.35);
   outline-offset: 2px;
   font-family: var(--font-mono);
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.26em;
+  font-size: 11px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(143, 34, 32, 0.8);
-  transform: rotate(5deg);
-  mix-blend-mode: multiply;
+  color: rgba(143, 34, 32, 0.85);
+  transform: rotate(3deg);
   pointer-events: none;
 }
 
@@ -77,8 +56,8 @@
   font-family: var(--typed);
   font-size: 28px;
   line-height: 1;
-  color: #2a2118;
-  text-shadow: 0 0 0.7px rgba(42, 33, 24, 0.55);
+  color: #1e1a14;
+  text-shadow: 0 0 0.7px rgba(30, 26, 20, 0.5);
 }
 
 .signoff {
@@ -93,8 +72,8 @@
 .sincerely {
   font-family: var(--typed);
   font-size: 18px;
-  color: #2a2118;
-  text-shadow: 0 0 0.7px rgba(42, 33, 24, 0.55);
+  color: #1e1a14;
+  text-shadow: 0 0 0.7px rgba(30, 26, 20, 0.5);
 }
 
 .signature {
@@ -144,15 +123,15 @@
   width: 100%;
   background: transparent;
   border: 0;
-  border-bottom: 1px solid rgba(70, 45, 15, 0.45);
+  border-bottom: 1px solid rgba(30, 26, 20, 0.35);
   border-radius: 0;
   padding: 8px 0 6px;
   font-family: var(--typed);
   font-weight: 400;
   font-size: 22px;
   line-height: 1.35;
-  color: #2a2118;
-  text-shadow: 0 0 0.7px rgba(42, 33, 24, 0.55);
+  color: #1e1a14;
+  text-shadow: 0 0 0.7px rgba(30, 26, 20, 0.5);
   color-scheme: light;
   outline: none;
   transition: border-color 0.2s ease, background 0.2s ease;
@@ -166,21 +145,21 @@
     to bottom,
     transparent 0,
     transparent calc(1.6em - 1px),
-    rgba(70, 45, 15, 0.3) calc(1.6em - 1px),
-    rgba(70, 45, 15, 0.3) 1.6em
+    rgba(30, 26, 20, 0.22) calc(1.6em - 1px),
+    rgba(30, 26, 20, 0.22) 1.6em
   );
   background-attachment: local;
   border-bottom: 0;
 }
 
 .field select option {
-  background: #efe2bf;
+  background: #f5eede;
   color: var(--ink-brown);
   font-size: 18px;
 }
 
 .field input::placeholder {
-  color: rgba(90, 65, 25, 0.38);
+  color: rgba(30, 26, 20, 0.4);
   text-shadow: none;
 }
 
@@ -208,7 +187,7 @@
   letter-spacing: 0.06em;
   color: var(--ink-brown);
   background: rgba(255, 248, 225, 0.25);
-  border: 1px solid rgba(70, 45, 15, 0.5);
+  border: 1px solid rgba(30, 26, 20, 0.45);
   border-radius: 999px;
   padding: 12px 16px;
   cursor: pointer;
@@ -293,16 +272,16 @@
   .form {
     grid-template-columns: 1fr;
     gap: 26px;
-    padding: 56px 22px 32px;
+    padding: 64px 28px 36px;
   }
   .sheet {
     margin-top: 20px;
   }
   .stamp {
-    top: 18px;
-    right: 16px;
-    font-size: 8px;
-    letter-spacing: 0.2em;
+    top: 30px;
+    right: 26px;
+    font-size: 9px;
+    letter-spacing: 1.5px;
   }
   .salutation {
     font-size: 24px;

@@ -115,43 +115,36 @@
 }
 
 .face {
-  background-color: #f8f1de;
-  background-image: var(--grain),
-    repeating-linear-gradient(
+  --off: 0px;
+  background-color: #f5eede;
+  background-image: repeating-linear-gradient(
       to bottom,
       transparent 0,
       transparent calc(var(--w) * 0.062),
-      rgba(31, 42, 68, 0.07) calc(var(--w) * 0.062),
-      rgba(31, 42, 68, 0.07) calc(var(--w) * 0.064)
+      rgba(30, 26, 20, 0.09) calc(var(--w) * 0.062),
+      rgba(30, 26, 20, 0.09) calc(var(--w) * 0.064)
     ),
-    radial-gradient(ellipse at 50% 40%, rgba(255, 255, 255, 0.45), transparent 70%);
-  box-shadow: inset 0 0 0 1px rgba(120, 95, 40, 0.14), inset 0 0 22px rgba(150, 115, 50, 0.1);
+    url("/images/paper.jpg");
+  background-size: auto, 900px auto;
+  background-position: 0 var(--off), 0 var(--off);
+  box-shadow: inset 0 0 0 1px rgba(154, 128, 72, 0.3), inset 0 0 40px rgba(120, 90, 40, 0.1);
 }
 
-.back {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+/* the texture and ruled lines carry on from one panel to the next */
+.p2 .face {
+  --off: calc(var(--w) * -0.3);
 }
-
-.face {
-  background-color: #f6efdc;
-  background-image: repeating-linear-gradient(
-    to bottom,
-    transparent 0,
-    transparent calc(var(--w) * 0.062),
-    rgba(31, 42, 68, 0.1) calc(var(--w) * 0.062),
-    rgba(31, 42, 68, 0.1) calc(var(--w) * 0.064)
-  );
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+.p3 .face {
+  --off: calc(var(--w) * -0.6);
 }
 
 .back {
   transform: rotateX(180deg);
-  background: var(--grain), linear-gradient(#f1e8cf, #e9dec0);
-  box-shadow: inset 0 0 0 1px rgba(120, 95, 40, 0.16), inset 0 0 22px rgba(150, 115, 50, 0.12);
+  background-color: #ece3cc;
+  background-image: url("/images/paper.jpg");
+  background-size: 900px auto;
+  background-blend-mode: multiply;
+  box-shadow: inset 0 0 0 1px rgba(154, 128, 72, 0.35), inset 0 0 40px rgba(120, 90, 40, 0.14);
 }
 
 /* soft crease where the paper folds */
@@ -277,7 +270,10 @@
 .envFront {
   position: absolute;
   inset: 0;
-  background: var(--grain), linear-gradient(160deg, #e9dcb9, #d6c7a0);
+  background-color: #efe6cb;
+  background-image: url("/images/paper.jpg");
+  background-size: 800px auto;
+  background-blend-mode: multiply;
   clip-path: polygon(0 0, 50% 52%, 100% 0, 100% 100%, 0 100%);
 }
 
@@ -511,14 +507,18 @@
   }
   50% {
     z-index: 4;
-    background-color: #e4d7b4;
-    background-image: var(--grain);
+    background-color: #f2e9d0;
+    background-image: url("/images/paper.jpg");
+    background-size: 800px auto;
+    background-blend-mode: multiply;
   }
   100% {
     transform: perspective(1100px) rotateX(0deg);
     z-index: 4;
-    background-color: #e4d7b4;
-    background-image: var(--grain);
+    background-color: #f2e9d0;
+    background-image: url("/images/paper.jpg");
+    background-size: 800px auto;
+    background-blend-mode: multiply;
   }
 }
 
