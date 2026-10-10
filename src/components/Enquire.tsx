@@ -1,5 +1,5 @@
-import Script from "next/script";
 import { Underline, HandNote } from "./Annotate";
+import EnquiryForm from "./EnquiryForm";
 import styles from "./Enquire.module.css";
 
 export default function Enquire() {
@@ -18,22 +18,7 @@ export default function Enquire() {
           I can&apos;t wait :)
         </HandNote>
       </p>
-      <div className={styles.frameWrap}>
-        <div className={styles.frame}>
-          <iframe
-            name="lc_contact_form"
-            frameBorder={0}
-            width="100%"
-            height="600"
-            src="https://maverickmagicians.17hats.com/p#/embed/pkzkfvbvdnrfrzrcffshktcbcknxxvfw"
-            className={styles.iframe}
-          />
-        </div>
-      </div>
-      <Script
-        src="https://maverickmagicians.17hats.com/vendor/iframeSizer.min.js"
-        strategy="afterInteractive"
-      />
+      <EnquiryForm />
     </section>
   );
 }

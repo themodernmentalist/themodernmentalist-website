@@ -82,3 +82,15 @@
     display: none;
   }
 }
+
+@media (min-width: 821px) {
+  .note {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+  .callButton:hover ~ .note,
+  .callButton:focus-visible ~ .note {
+    opacity: 1;
+  }
+}

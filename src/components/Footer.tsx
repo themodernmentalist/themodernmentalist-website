@@ -99,6 +99,7 @@ export default function Footer() {
         </div>
       </div>
 
+
       <div className={styles.bottom}>
         <span>The Modern Mentalist © {new Date().getFullYear()}</span>
         <Link href="/blog" className={styles.blogLink}>

@@ -5,20 +5,20 @@ import styles from "./Logos.module.css";
 // tall during processing), used so next/image can compute the correct aspect
 // ratio when we constrain every logo to the same display height in CSS.
 const clients = [
-  { name: "L'Oréal", file: "loreal", width: 2096, height: 400, displayHeight: 24 },
-  { name: "Meta", file: "meta", width: 569, height: 400 },
+  { name: "L'Oréal", file: "loreal", width: 2096, height: 400, displayHeight: 20 },
+  { name: "Meta", file: "meta", width: 569, height: 400, displayHeight: 34 },
   { name: "Spotify", file: "spotify", width: 399, height: 400 },
-  { name: "Monzo", file: "monzo", width: 710, height: 400 },
+  { name: "Monzo", file: "monzo", width: 710, height: 400, displayHeight: 50 },
   { name: "Breitling", file: "breitling", width: 877, height: 400 },
-  { name: "Sky", file: "sky", width: 651, height: 400 },
-  { name: "Warner Bros", file: "warner-bros", width: 328, height: 400 },
+  { name: "Sky", file: "sky", width: 651, height: 400, displayHeight: 34 },
+  { name: "Warner Bros", file: "warner-bros", width: 328, height: 400, displayHeight: 50 },
   { name: "EY", file: "ey", width: 396, height: 400 },
   { name: "PGA Tour", file: "pga-tour", width: 313, height: 400 },
   { name: "Checkout.com", file: "checkout", width: 369, height: 400 },
-  { name: "Four Seasons", file: "four-seasons", width: 868, height: 400 },
-  { name: "Soho House", file: "soho-house", width: 647, height: 400 },
-  { name: "Soneva", file: "soneva", width: 704, height: 400 },
-  { name: "Explora Journeys", file: "explora-journeys", width: 498, height: 400 },
+  { name: "Four Seasons", file: "four-seasons", width: 868, height: 400, displayHeight: 50 },
+  { name: "Soho House", file: "soho-house", width: 647, height: 400, displayHeight: 50 },
+  { name: "Soneva", file: "soneva", width: 704, height: 400, displayHeight: 50 },
+  { name: "Explora Journeys", file: "explora-journeys", width: 498, height: 400, displayHeight: 58 },
 ];
 
 function LogoTrack({ suffix }: { suffix: string }) {

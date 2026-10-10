@@ -27,7 +27,7 @@ export default function Hero() {
           </p>
           <p className={styles.tagline}>
             <MarkerWrite
-              text={"Entertainment that\ncreates connection."}
+              text={"Entertainment that\u00A0\ncreates connection."}
               color="var(--poster-yellow)"
             />
           </p>

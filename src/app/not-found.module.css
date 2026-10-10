@@ -1,0 +1,57 @@
+.page {
+  min-height: 100vh;
+  background: var(--ink);
+  color: var(--paper);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 6% 80px;
+}
+
+.code {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(247, 246, 243, 0.55);
+  margin-bottom: 18px;
+}
+
+.title {
+  font-family: var(--font-poster);
+  font-weight: 400;
+  font-size: clamp(72px, 16vw, 200px);
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--poster-yellow);
+}
+
+.note {
+  margin: 22px 0 14px;
+}
+
+.sub {
+  max-width: 420px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(247, 246, 243, 0.7);
+  margin-bottom: 36px;
+}
+
+.cta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--paper);
+  text-decoration: none;
+  border-bottom: 1px solid var(--poster-yellow);
+  padding-bottom: 6px;
+}
+
+.cta:hover {
+  color: var(--poster-yellow);
+}

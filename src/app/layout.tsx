@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Bodoni_Moda, Karla, JetBrains_Mono, Anton, Caveat, Oswald } from "next/font/google";
+import { Bodoni_Moda, Karla, JetBrains_Mono, Anton, Caveat, Oswald, Special_Elite } from "next/font/google";
 import Script from "next/script";
 import CallButton from "@/components/CallButton";
+import TabTitle from "@/components/TabTitle";
 import "./globals.css";
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
@@ -43,6 +44,12 @@ const oswald = Oswald({
   weight: ["400", "500", "600"],
 });
 
+const specialElite = Special_Elite({
+  variable: "--font-typewriter",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://themodernmentalist.com"),
   title: "The Modern Mentalist | Edwin Todd",
@@ -64,11 +71,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${karla.variable} ${jetbrainsMono.variable} ${anton.variable} ${caveat.variable} ${oswald.variable}`}
+      className={`${fraunces.variable} ${karla.variable} ${jetbrainsMono.variable} ${anton.variable} ${caveat.variable} ${oswald.variable} ${specialElite.variable}`}
     >
       <body>
         {children}
         <CallButton />
+        <TabTitle />
         {GA_MEASUREMENT_ID && (
           <>
             <Script
