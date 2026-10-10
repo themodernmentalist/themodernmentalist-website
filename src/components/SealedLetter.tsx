@@ -5,7 +5,7 @@ import styles from "./SealedLetter.module.css";
 
 // How long the sealed envelope rests before it flies away, and how long the
 // fly-away animation takes (keep in step with SealedLetter.module.css).
-const REST_MS = 1200;
+const REST_MS = 2200;
 const FLY_MS = 700;
 
 // A hand-poured wax blob: a circle with a slightly irregular edge.
