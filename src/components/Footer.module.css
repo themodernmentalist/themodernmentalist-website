@@ -17,6 +17,11 @@
   scrollbar-width: none;
 }
 
+/* while the gallery drifts by itself, snapping would fight the movement */
+.track[data-auto="true"] {
+  scroll-snap-type: none;
+}
+
 .track::-webkit-scrollbar {
   display: none;
 }
