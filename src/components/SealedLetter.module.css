@@ -392,6 +392,8 @@
   color: var(--poster-yellow);
   opacity: 0;
   transform: rotate(-2deg);
+  /* shares a grid cell with the button; must not catch its clicks while invisible */
+  pointer-events: none;
 }
 
 .sealed .caption {
