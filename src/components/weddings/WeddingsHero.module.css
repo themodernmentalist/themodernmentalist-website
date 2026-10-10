@@ -67,6 +67,17 @@
   transform: scaleX(-1);
 }
 
+/* desktop only: nudge the whole groom note (text and arrow) about 1cm down and right */
+@media (min-width: 821px) {
+  .groomNote {
+    transform: translate(38px, 38px);
+  }
+  /* bride note: about 0.8cm right and 0.7cm down */
+  .brideNote {
+    transform: translate(30px, 26px);
+  }
+}
+
 .eyebrow {
   color: var(--gold-label);
   margin-bottom: 20px;
