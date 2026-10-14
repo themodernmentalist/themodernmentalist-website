@@ -62,10 +62,10 @@ export default function EnquiryForm() {
         const body = await res.json().catch(() => ({}));
         throw new Error(body.error || "Something went wrong.");
       }
-      (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag?.(
-        "event",
-        "generate_lead",
-      );
+      const gtag = (window as unknown as { gtag?: (...args: unknown[]) => void })
+        .gtag;
+      gtag?.("event", "generate_lead");
+      gtag?.("event", "ads_conversion_enquiry_1");
       const reduceMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)",
       ).matches;
