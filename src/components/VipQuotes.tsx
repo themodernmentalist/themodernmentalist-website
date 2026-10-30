@@ -22,7 +22,7 @@ export default function VipQuotes({
   featuredOnly?: boolean;
 }) {
   return (
-    <section className={styles.section}>
+    <section className={`${styles.section} ${featuredOnly ? styles.sectionTight : ""}`}>
       {!featuredOnly && (
         <span className={`eyebrow ${styles.eyebrow}`}>In Their Words</span>
       )}

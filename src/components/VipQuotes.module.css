@@ -134,3 +134,30 @@
     font-size: 14px;
   }
 }
+
+@media (min-width: 821px) {
+  .quote {
+    font-family: var(--font-hand);
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(32px, 3.6vw, 46px);
+    line-height: 1.1;
+  }
+}
+
+@media (min-width: 821px) {
+  .sectionTight {
+    padding-top: 20px;
+    margin-top: -24px;
+  }
+  .sectionTight .featured.featuredLast {
+    padding-bottom: 28px;
+  }
+}
+
+@media (max-width: 820px) {
+  .sectionTight {
+    padding-top: 6px;
+    margin-top: -10px;
+  }
+}

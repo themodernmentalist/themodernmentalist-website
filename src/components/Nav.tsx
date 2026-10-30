@@ -17,6 +17,14 @@ const links = [
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const [showMobileCta, setShowMobileCta] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     const heroCta = Array.from(
@@ -37,7 +45,7 @@ export default function Nav() {
   }, []);
 
   return (
-    <nav className={styles.nav}>
+    <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
       <Link href="/" className={`${styles.logo} ${styles.desktopLogo}`}>
         EDWIN
       </Link>

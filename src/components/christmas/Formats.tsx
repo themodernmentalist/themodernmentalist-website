@@ -12,13 +12,15 @@ const formats = [
   {
     num: "02 - THE HIGHLIGHT",
     title: "The Stage Set",
-    description: "The unforgettable moment they'll still be talking about next Christmas.",
+    description: "An unforgettable moment for the whole room, from a 10-minute showstopper to a full 45-minute set.",
     noteAfterTitle: "this can be bespoke to your company",
   },
   {
     num: "03 - HOSTING",
     title: "Host/Emcee",
-    description: "Energy and flow for the whole evening, not just a slot in it.",
+    description:
+      "I keep the evening flowing and weave mind reading into the moments between.",
+    noteAfterTitle: "I promise to do more than just announce dinner",
   },
 ];
 
@@ -33,7 +35,10 @@ export default function Formats() {
             <span className={styles.num}>{format.num}</span>
             <h3>{format.title}</h3>
             {format.noteAfterTitle && (
-              <HandNote className={styles.noteAfterTitle} color="var(--poster-yellow)">
+              <HandNote
+                className={`${styles.noteAfterTitle} ${format.title === "Host/Emcee" ? "" : styles.noteDesktopOnly}`}
+                color="var(--poster-yellow)"
+              >
                 {format.noteAfterTitle}
               </HandNote>
             )}

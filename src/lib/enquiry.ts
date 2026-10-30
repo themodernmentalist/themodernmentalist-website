@@ -1,5 +1,8 @@
 export const EVENT_TYPES = ["Corporate", "Private party", "Wedding"] as const;
 
+// Preselected on the Christmas landing page only; travels in the message like the others.
+export const CHRISTMAS_EVENT_TYPE = "Company Christmas party";
+
 // Same options, in the same order, as the 17hats lead capture form.
 export const BUDGETS = [
   "Up to £1500",

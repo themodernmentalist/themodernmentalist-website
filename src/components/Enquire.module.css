@@ -51,3 +51,61 @@
     margin-bottom: 24px;
   }
 }
+
+@media (min-width: 821px) {
+  .title {
+    font-family: var(--font-poster);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    line-height: 0.98;
+    font-size: clamp(64px,8vw,120px);
+    color: var(--poster-yellow);
+  }
+}
+
+.enquireXmas {
+  padding-top: 40px;
+  padding-bottom: 72px;
+}
+
+.xmasEyebrow {
+  display: block;
+  color: var(--poster-yellow);
+  margin-bottom: 10px;
+}
+
+.xmasTitle {
+  font-family: var(--font-poster);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  color: var(--poster-yellow);
+  font-size: clamp(34px, 4.2vw, 60px);
+  margin-bottom: 12px;
+}
+
+.xmasIntro {
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(247, 246, 243, 0.75);
+  max-width: 520px;
+  margin: 0 auto 24px;
+}
+
+@media (max-width: 820px) {
+  .enquireXmas {
+    padding-top: 30px;
+    padding-bottom: 48px;
+  }
+  .xmasEyebrow {
+    display: none;
+  }
+  .xmasTitle {
+    font-size: clamp(30px, 8.4vw, 40px);
+  }
+  .xmasIntro {
+    margin-bottom: 18px;
+  }
+}

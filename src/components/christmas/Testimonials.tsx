@@ -6,23 +6,24 @@ const quotes = [
     quote:
       "Edwin was amazing! We had him perform at a client event and we were all so blown away. Completely different to any magician I've seen before with a unique and engaging performance. Could not recommend him enough!!!!",
     name: "Oxford Global",
-    mobileHidden: true,
-  },
-  {
-    quote:
-      "With nearly 200 attendees, Edwin intuitively read a reserved crowd, bringing in helpers and impressing everyone with his stage act, then stayed all afternoon entertaining guests. He made our Christmas party.",
-    name: "Sky Mobile Christmas Party 2025",
-    mobileOnly: true,
-  },
-  {
-    quote:
-      "We hired Ed for our corporate party and to say people are still talking about it days after the event itself is an understatement. Ed amazed everyone with his mentalism and magic, everyone came away with a story to tell of how they were utterly baffled at what happened. We are already looking to rebook him for next years event!",
-    name: "Strangford Management",
+    short:
+      "Completely different to any magician I’ve seen before. Could not recommend him enough!",
   },
   {
     quote:
       "Incredible! Mind fully blown but also so impressed at the warmth and caring way Edwin looked after guests and hosted our event. He's pure magic.",
     name: "Sahara Foundation",
+    short:
+      "…so impressed at the warmth and caring way Edwin looked after guests and hosted our event. He’s pure magic.",
+    mobileHidden: true,
+  },
+  {
+    quote:
+      "We hired Ed for our corporate party and to say people are still talking about it days after the event itself is an understatement. Ed amazed everyone with his mentalism and magic, everyone came away with a story to tell of how they were utterly baffled at what happened. We are already looking to rebook him for next years event!",
+    name: "Strangford Management",
+    short:
+      "Ed amazed everyone with his mentalism and magic… We are already looking to rebook him for next years event!",
+    mobileHidden: true,
   },
 ];
 
@@ -55,17 +56,15 @@ export default function Testimonials() {
       <div className={styles.grid}>
         {quotes.map((item) => (
           <div
-            className={[
-              styles.item,
-              item.mobileOnly ? styles.mobileOnly : "",
-              item.mobileHidden ? styles.mobileHidden : "",
-            ]
-              .filter(Boolean)
-              .join(" ")}
+            className={`${styles.item} ${"mobileHidden" in item ? styles.mobileHidden : ""}`}
             key={item.name}
           >
-            <p className={styles.quote}>&ldquo;{item.quote}&rdquo;</p>
+            <p className={styles.quote}>&ldquo;{item.short}&rdquo;</p>
             <p className={styles.name}>{item.name}</p>
+            <details className={styles.more}>
+              <summary>Read the full review</summary>
+              <p>&ldquo;{item.quote}&rdquo;</p>
+            </details>
           </div>
         ))}
       </div>

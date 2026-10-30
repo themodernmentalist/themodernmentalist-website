@@ -1,9 +1,0 @@
-.statsWrap {
-  position: relative;
-}
-
-@media (max-width: 820px) {
-  .statsWrap {
-    margin-top: -28px;
-  }
-}

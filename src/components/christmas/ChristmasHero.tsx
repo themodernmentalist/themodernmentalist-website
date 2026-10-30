@@ -1,12 +1,12 @@
 import Image from "next/image";
-import { Underline, HandNote, LoopyArrow } from "../Annotate";
+import { Underline } from "../Annotate";
 import styles from "./ChristmasHero.module.css";
 
 export default function ChristmasHero() {
   return (
     <section className={styles.hero}>
       <Image
-        src="/images/corporate-hero.jpg"
+        src="/images/christmas-hero-desktop.jpg"
         alt="Edwin Todd performing mentalism at a corporate Christmas party"
         fill
         priority
@@ -15,7 +15,7 @@ export default function ChristmasHero() {
         quality={90}
       />
       <Image
-        src="/images/hero-stage.jpg"
+        src="/images/christmas-hero-mobile.jpg"
         alt="Edwin Todd performing mentalism at a corporate Christmas party"
         fill
         priority
@@ -24,29 +24,28 @@ export default function ChristmasHero() {
         quality={90}
       />
       <div className={styles.overlay} />
-      <div className={styles.guestsNote}>
-        <LoopyArrow className={styles.guestsArrow} />
-        <HandNote color="var(--poster-yellow)">
-          We want your guests looking like this!
-        </HandNote>
-      </div>
       <div className={styles.content}>
         <h1>
-          The Christmas party{" "}
-          <Underline>everyone still talks about</Underline> in January...
+          <span className={styles.desktopTitle}>
+            The Christmas party they&rsquo;re{" "}
+            <Underline>still talking about</Underline> in January
+          </span>
+          <span className={styles.mobileTitle}>
+            Give them a Christmas&nbsp;party{" "}
+            <Underline>worth talking about.</Underline>
+          </span>
         </h1>
         <p className={styles.sub}>
-          <strong>The Modern Mentalist:</strong>{" "}
-          Entertainment that creates connection &amp; turns colleagues into
-          friends.
+          Mind reading and magic that break the ice, get colleagues laughing
+          and make the whole room part of the show.
         </p>
         <div className={styles.ctaRow}>
           <a className={styles.cta} href="#enquire">
-            Check Your Date →
+            Check Availability →
           </a>
-          <HandNote className={styles.ctaNote} color="var(--poster-yellow)">
-            before it&apos;s gone!
-          </HandNote>
+          <p className={styles.ctaHelper}>
+            Tell me your date and venue. I&rsquo;ll reply personally.
+          </p>
         </div>
       </div>
     </section>

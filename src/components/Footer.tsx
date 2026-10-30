@@ -25,7 +25,7 @@ export default function Footer() {
   const trackRef = useRef<HTMLDivElement>(null);
   const hovered = useRef(false);
   const holdUntil = useRef(0);
-  // Desktop only: the gallery drifts on its own and loops seamlessly (two copies of the strip).
+  // The gallery drifts on its own and loops seamlessly (two copies of the strip).
   const [auto, setAuto] = useState(false);
 
   const scroll = (direction: number) => {
@@ -39,14 +39,11 @@ export default function Footer() {
   };
 
   useEffect(() => {
-    const desktop = window.matchMedia("(min-width: 821px)");
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const update = () => setAuto(desktop.matches && !reduceMotion.matches);
+    const update = () => setAuto(!reduceMotion.matches);
     update();
-    desktop.addEventListener("change", update);
     reduceMotion.addEventListener("change", update);
     return () => {
-      desktop.removeEventListener("change", update);
       reduceMotion.removeEventListener("change", update);
     };
   }, []);

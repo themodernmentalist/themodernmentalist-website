@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { BUDGETS, EVENT_TYPES, HEARD_FROM, type EnquiryPayload } from "@/lib/enquiry";
+import { BUDGETS, CHRISTMAS_EVENT_TYPE, EVENT_TYPES, HEARD_FROM, type EnquiryPayload } from "@/lib/enquiry";
 import { submitToSeventeenHats } from "@/lib/seventeenHats";
 
 const WINDOW_MS = 10 * 60 * 1000;
@@ -58,7 +58,7 @@ export async function POST(request: Request) {
   const message = clean(body.message, 4000);
 
   const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  if (!name || !emailOk || !(EVENT_TYPES as readonly string[]).includes(eventType) || !phone || !/^\d{4}-\d{2}-\d{2}$/.test(date) || !location || !(BUDGETS as readonly string[]).includes(budget) || !message) {
+  if (!name || !emailOk || ![...EVENT_TYPES, CHRISTMAS_EVENT_TYPE].includes(eventType as never) || !phone || !/^\d{4}-\d{2}-\d{2}$/.test(date) || !location || !(BUDGETS as readonly string[]).includes(budget) || !message) {
     return NextResponse.json({ error: "Please check the highlighted fields." }, { status: 400 });
   }
   if (!(HEARD_FROM as readonly string[]).includes(heardFrom)) {

@@ -3,12 +3,13 @@
 import { useEffect, useRef, useState } from "react";
 import EnquirySentOverlay from "./EnquirySentOverlay";
 import SealedLetter from "./SealedLetter";
-import { BUDGETS, EVENT_TYPES, HEARD_FROM } from "@/lib/enquiry";
+import { BUDGETS, CHRISTMAS_EVENT_TYPE, EVENT_TYPES, HEARD_FROM } from "@/lib/enquiry";
 import styles from "./EnquiryForm.module.css";
 
 type Status = "idle" | "sending" | "error";
 
-export default function EnquiryForm() {
+export default function EnquiryForm({ variant }: { variant?: "christmas" }) {
+  const christmas = variant === "christmas";
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
   const [sealing, setSealing] = useState<{
@@ -17,7 +18,7 @@ export default function EnquiryForm() {
   } | null>(null);
   const [sent, setSent] = useState(false);
   const [name, setName] = useState("");
-  const [eventType, setEventType] = useState("");
+  const [eventType, setEventType] = useState(christmas ? CHRISTMAS_EVENT_TYPE : "");
   const [budget, setBudget] = useState("");
   const mountedAt = useRef(0);
   const formRef = useRef<HTMLFormElement>(null);
@@ -53,7 +54,12 @@ export default function EnquiryForm() {
           location: data.get("location"),
           budget,
           heardFrom: data.get("heardFrom"),
-          message: data.get("message"),
+          message: [
+            data.get("guests") ? `Approx. guests: ${data.get("guests")}` : "",
+            data.get("message"),
+          ]
+            .filter(Boolean)
+            .join("\n\n"),
           company: data.get("company"),
           elapsed: Date.now() - mountedAt.current,
         }),
@@ -76,7 +82,7 @@ export default function EnquiryForm() {
       formRef.current?.reset();
       setBudget("");
       setName("");
-      setEventType("");
+      setEventType(christmas ? CHRISTMAS_EVENT_TYPE : "");
       setStatus("idle");
       if (reduceMotion) setSent(true);
       else setSealing(letter);
@@ -96,6 +102,7 @@ export default function EnquiryForm() {
         <form ref={formRef} className={styles.form} onSubmit={onSubmit}>
           <p className={styles.stamp}>Strictly confidential</p>
           <p className={`${styles.wide} ${styles.salutation}`}>Dear Edwin,</p>
+          {!christmas && (
           <fieldset className={`${styles.field} ${styles.wide}`}>
             <legend className={styles.label}>What kind of event?</legend>
             <div className={styles.chips}>
@@ -113,7 +120,68 @@ export default function EnquiryForm() {
               ))}
             </div>
           </fieldset>
+          )}
 
+          {christmas ? (
+            <>
+          <label className={styles.field}>
+            <span className={styles.label}>Event date</span>
+            <input name="date" type="date" required />
+          </label>
+          <label className={styles.field}>
+            <span className={styles.label}>
+              Approx. guests <span className={styles.optional}>optional</span>
+            </span>
+            <input name="guests" type="number" inputMode="numeric" min={1} max={100000} placeholder="e.g. 80" />
+          </label>
+          <label className={`${styles.field} ${styles.wide}`}>
+            <span className={styles.label}>Where is the event?</span>
+            <input
+              name="location"
+              type="text"
+              required
+              maxLength={200}
+              placeholder="Venue, town or country"
+            />
+          </label>
+
+          <label className={styles.field}>
+            <span className={styles.label}>Your name</span>
+            <input
+              name="name"
+              type="text"
+              required
+              autoComplete="name"
+              maxLength={120}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </label>
+          <label className={styles.field}>
+            <span className={styles.label}>Email address</span>
+            <input
+              name="email"
+              type="email"
+              required
+              autoComplete="email"
+              maxLength={200}
+            />
+          </label>
+          <label className={styles.field}>
+            <span className={styles.label}>
+              Phone
+            </span>
+            <input
+              name="phone"
+              type="tel"
+              required
+              autoComplete="tel"
+              maxLength={40}
+              placeholder="+44, country code please"
+            />
+          </label>
+            </>
+          ) : (
+            <>
           <label className={styles.field}>
             <span className={styles.label}>Your name</span>
             <input
@@ -162,6 +230,9 @@ export default function EnquiryForm() {
               placeholder="Venue, town or country"
             />
           </label>
+
+            </>
+          )}
 
           <fieldset
             className={`${styles.field} ${styles.wide} ${styles.budget}`}
