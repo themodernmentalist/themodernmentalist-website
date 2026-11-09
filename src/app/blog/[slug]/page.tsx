@@ -12,6 +12,8 @@ import styles from "./post.module.css";
 
 export const revalidate = 60;
 
+const SITE_URL = "https://themodernmentalist.com";
+
 const categoryLabels: Record<string, string> = {
   corporate: "Corporate",
   weddings: "Weddings",
@@ -53,11 +55,36 @@ export async function generateMetadata({
   const post = await client.fetch(POST_QUERY, { slug });
   if (!post) return {};
 
+  const url = `${SITE_URL}/blog/${post.slug.current}`;
+  const ogImage = post.mainImage
+    ? urlForImage(post.mainImage).width(1200).height(630).fit("crop").url()
+    : undefined;
+
   return {
     title: `${post.title} | The Modern Mentalist`,
     description: post.excerpt,
     alternates: {
       canonical: `/blog/${post.slug.current}`,
+    },
+    openGraph: {
+      type: "article",
+      url,
+      siteName: "The Modern Mentalist",
+      title: post.title,
+      description: post.excerpt,
+      locale: "en_GB",
+      publishedTime: post.publishedAt,
+      modifiedTime: post._updatedAt,
+      authors: ["Edwin Todd"],
+      images: ogImage
+        ? [{ url: ogImage, width: 1200, height: 630, alt: post.title }]
+        : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: ogImage ? [ogImage] : undefined,
     },
   };
 }
@@ -72,29 +99,85 @@ export default async function BlogPostPage({
 
   if (!post) notFound();
 
-  const jsonLd = post.faqs?.length
-    ? {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: post.faqs.map((faq: { question: string; answer: string }) => ({
-          "@type": "Question",
-          name: faq.question,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: faq.answer,
-          },
-        })),
-      }
-    : null;
+  const url = `${SITE_URL}/blog/${post.slug.current}`;
+  const imageUrl = post.mainImage
+    ? urlForImage(post.mainImage).width(1200).height(630).fit("crop").url()
+    : undefined;
+
+  // Ranked list posts ("## 1. Name" headings) also get ItemList markup.
+  const rankedItems: { position: number; name: string }[] = (post.body ?? [])
+    .filter((b: { _type: string; style?: string }) => b._type === "block" && b.style === "h2")
+    .map((b: { children?: { text: string }[] }) => (b.children ?? []).map((c) => c.text).join(""))
+    .map((text: string) => text.match(/^(\d+)\.\s+(.+)$/))
+    .filter((m: RegExpMatchArray | null): m is RegExpMatchArray => Boolean(m))
+    .map((m: RegExpMatchArray) => ({ position: Number(m[1]), name: m[2].trim() }));
+
+  const graph: Record<string, unknown>[] = [
+    {
+      "@type": "BlogPosting",
+      "@id": `${url}#article`,
+      mainEntityOfPage: { "@type": "WebPage", "@id": url },
+      headline: post.title,
+      description: post.excerpt,
+      image: imageUrl ? [imageUrl] : undefined,
+      datePublished: post.publishedAt,
+      dateModified: post._updatedAt ?? post.publishedAt,
+      inLanguage: "en-GB",
+      articleSection: categoryLabels[post.category] ?? "General",
+      author: {
+        "@type": "Person",
+        name: "Edwin Todd",
+        url: `${SITE_URL}/about`,
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "The Modern Mentalist",
+        url: SITE_URL,
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
+        { "@type": "ListItem", position: 3, name: post.title, item: url },
+      ],
+    },
+  ];
+
+  if (rankedItems.length >= 3) {
+    graph.push({
+      "@type": "ItemList",
+      name: post.title,
+      itemListOrder: "https://schema.org/ItemListOrderAscending",
+      numberOfItems: rankedItems.length,
+      itemListElement: rankedItems.map((item) => ({
+        "@type": "ListItem",
+        position: item.position,
+        name: item.name,
+      })),
+    });
+  }
+
+  if (post.faqs?.length) {
+    graph.push({
+      "@type": "FAQPage",
+      mainEntity: post.faqs.map((faq: { question: string; answer: string }) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: { "@type": "Answer", text: faq.answer },
+      })),
+    });
+  }
+
+  const jsonLd = { "@context": "https://schema.org", "@graph": graph };
 
   return (
     <>
-      {jsonLd && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Nav />
       <article className={styles.post}>
         <header className={styles.header}>

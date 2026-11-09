@@ -21,6 +21,7 @@ export const POST_QUERY = defineQuery(`
     mainImage,
     category,
     publishedAt,
+    _updatedAt,
     body,
     faqs
   }

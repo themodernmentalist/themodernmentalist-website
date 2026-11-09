@@ -10,8 +10,17 @@ export default function Hero() {
         alt="Edwin Todd performing on stage"
         fill
         priority
-        className={styles.heroImage}
-        sizes="(max-width: 820px) 200vw, 100vw"
+        className={`${styles.heroImage} ${styles.desktopImage}`}
+        sizes="(max-width: 820px) 0px, 100vw"
+        quality={90}
+      />
+      <Image
+        src="/images/christmas-hero-mobile.jpg"
+        alt="Edwin performing on stage"
+        fill
+        priority
+        className={`${styles.heroImage} ${styles.mobileImage}`}
+        sizes="(max-width: 820px) 200vw, 0px"
         quality={90}
       />
       <div className={styles.overlay} />
@@ -33,7 +42,7 @@ export default function Hero() {
           </p>
         </div>
         <div className={styles.sub}>
-          <p>
+          <p className={styles.guestsLine}>
             Your guests won&apos;t just remember Edwin. They&apos;ll
             remember each other.
           </p>
@@ -41,7 +50,7 @@ export default function Hero() {
             <a className={styles.cta} href="#enquire">
               Enquire →
             </a>
-            <HandNote color="var(--poster-yellow)">trust me ;)</HandNote>
+            <HandNote className={styles.trustNote} color="var(--poster-yellow)">trust me ;)</HandNote>
           </div>
         </div>
       </div>
