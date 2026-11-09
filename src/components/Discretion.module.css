@@ -74,6 +74,16 @@
 @media (min-width: 821px) {
   .discretion {
     padding-top: 24px;
+    padding-bottom: 32px;
+  }
+  .introRow {
+    margin-bottom: 8px;
+  }
+  .card {
+    padding: 28px 32px;
+  }
+  .quote {
+    margin-bottom: 0;
   }
 }
 
