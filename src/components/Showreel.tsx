@@ -13,7 +13,7 @@ export default function Showreel({ simpleHeading = false }: { simpleHeading?: bo
       )}
       <div className={styles.frame}>
         <iframe
-          src="https://player.vimeo.com/video/1154587554?title=0&byline=0&portrait=0"
+          src="https://player.vimeo.com/video/1245073592?title=0&byline=0&portrait=0"
           title="Edwin Todd showreel"
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen
